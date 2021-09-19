@@ -2,7 +2,7 @@
 var get_user = function(email) {
    var db = firebase.firestore();
    db.collection("users").where("email", "==", email) 
-
+   db.collection("menores").where("email", "==", email) 
    .get() 
    .then((querySnapshot) => {
    querySnapshot.forEach((doc) => {

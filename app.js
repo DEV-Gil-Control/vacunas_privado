@@ -47,49 +47,6 @@ var push_to_firebase = function(data){
         .catch(function(error) {
             console.error("Message could not be sent: ", error);
         });
-      }
-
-      var contact_submit = function(){
-           var email = document.getElementById("email");
-        var namemenor = document.getElementById("namemenor");
-          var edadmenor = document.getElementById("edadmenor");
-        var apaternomenor = document.getElementById("apaternomenor");
-        var amaternomenor = document.getElementById("amaternomenor");
-        var curpmenor = document.getElementById("curpmenor");  
-          var nametutor = document.getElementById("nametutor");
-          var apaternotutor = document.getElementById("apaternotutor");
-          var amaternotutor = document.getElementById("amaternotutor");
-          var domiciliotutor = document.getElementById("domiciliotutor");
-          var coloniatutor = document.getElementById("coloniatutor");
-          var cptutor = document.getElementById("cptutor");
-          var mpiotutor = document.getElementById("mpiotutor");
-          var teltutor = document.getElementById("teltutor");
-          var celtutor = document.getElementById("celtutor");
-          var redtutor = document.getElementById("redtutor");
-          var mailtutor = document.getElementById("mailtutor");
-
-
-        var data = {
-            "email": email.value,
-          "namemenor": namemenor.value,
-            "edadmenor": edadmenor.value,
-          "apaternomenor": apaternomenor.value,
-          "amaternomenor": amaternomenor.value,
-          "curpmenor": curpmenor.value,
-            "nametutor": nametutor.value,
-            "apaternotutor": apaternotutor.value,
-            "amaternotutor": amaternotutor.value,
-            "domiciliotutor": domiciliotutor.value,
-            "coloniatutor": coloniatutor.value,
-            "cptutor": cptutor.value,
-            "mpiotutor": mpiotutor.value,
-            "teltutor": teltutor.value,
-            "celtutor": celtutor.value,
-            "redtutor": redtutor.value
-            "mailtutor": redtutor.value
-        }
-        push_to_firebase(data);
-          
 
       }
       

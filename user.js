@@ -50,7 +50,7 @@ var push_to_firebase = function(data){
               celtutor: data["celtutor"],
               redtutor: data["redtutor"],
               mailtutor: data["mailtutor"],
-              email: data["${doc.data().email}"],
+              email: data["email"],
             timestamp: Date.now()
         })
         .then(function(docRef) {

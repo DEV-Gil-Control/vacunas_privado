@@ -50,6 +50,7 @@ var push_to_firebase = function(data){
               teltutor: data["teltutor"],
               celtutor: data["celtutor"],
               redtutor: data["redtutor"],
+           mailtutor: data["mailtutor"],
             timestamp: Date.now()
         })
         .then(function(docRef) {
@@ -78,6 +79,7 @@ var push_to_firebase = function(data){
           var teltutor = document.getElementById("teltutor");
           var celtutor = document.getElementById("celtutor");
           var redtutor = document.getElementById("redtutor");
+         var mailtutor = document.getElementById("mailtutor");
 
         var data = {
             "email": email.value,
@@ -96,6 +98,7 @@ var push_to_firebase = function(data){
             "teltutor": teltutor.value,
             "celtutor": celtutor.value,
             "redtutor": redtutor.value
+           "mailtutor": mailtutor.value
         }
         push_to_firebase(data);
           

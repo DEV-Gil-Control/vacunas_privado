@@ -99,7 +99,7 @@ var push_to_firebase = function(data){
             "celtutor": celtutor.value,
             "redtutor": redtutor.value,
             "mailtutor": mailtutor.value,
-           "email": mailtutor.value
+           "email": email.value
         }
         push_to_firebase(data);
           

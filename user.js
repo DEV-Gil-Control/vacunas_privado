@@ -30,11 +30,11 @@ var get_user = function(email) {
 //- - - - - - - - -  push data - - - - - - - - - - - -//
 
 var push_to_firebase = function(data){
-        alert("Registro creado exitosamente, continúa para descargar el documento")
+        alert("Registro creado exitosamente")
         var db = firebase.firestore();
 
         db.collection("messages").add({
-            email: data["email"],
+            //email: data["email"],
             namemenor: data["namemenor"],
            edadmenor: data["edadmenor"],
             apaternomenor: data["apaternomenor"],
@@ -62,7 +62,7 @@ var push_to_firebase = function(data){
       }
 
       var contact_submit = function(){
-           var email = document.getElementById("email");
+          // var email = document.getElementById("email");
         var namemenor = document.getElementById("namemenor");
          var edadmenor = document.getElementById("edademenor");
         var apaternomenor = document.getElementById("apaternomenor");
@@ -80,7 +80,7 @@ var push_to_firebase = function(data){
           var redtutor = document.getElementById("redtutor");
 
         var data = {
-            "email": email.value,
+            //"email": email.value,
           "namemenor": namemenor.value,
            "edadmenor": edadmenor.value,
           "apaternomenor": apaternomenor.value,

@@ -35,10 +35,10 @@ var push_to_firebase = function(data){
 
         db.collection("messages").add({
             namemenor: data["namemenor"],
-           edadmenor: data["edadmenor"],
             apaternomenor: data["apaternomenor"],
             amaternomenor: data["amaternomenor"],
             curpmenor: data["curpmenor"],
+            edadmenor: data["edadmenor"],
               nametutor: data["nametutor"],
               apaternotutor: data["apaternotutor"],
               amaternotutor: data["amaternotutor"],
@@ -64,10 +64,10 @@ var push_to_firebase = function(data){
       var contact_submit = function(){
 
         var namemenor = document.getElementById("namemenor");
-         var edadmenor = document.getElementById("edademenor");
         var apaternomenor = document.getElementById("apaternomenor");
         var amaternomenor = document.getElementById("amaternomenor");
-        var curpmenor = document.getElementById("curpmenor");  
+        var curpmenor = document.getElementById("curpmenor"); 
+         var edadmenor = document.getElementById("edademenor");
           var nametutor = document.getElementById("nametutor");
           var apaternotutor = document.getElementById("apaternotutor");
           var amaternotutor = document.getElementById("amaternotutor");
@@ -83,9 +83,9 @@ var push_to_firebase = function(data){
         var data = {
 
           "namemenor": namemenor.value,
-           "edadmenor": edadmenor.value,
           "apaternomenor": apaternomenor.value,
           "amaternomenor": amaternomenor.value,
+           "edadmenor": edadmenor.value,
           "curpmenor": curpmenor.value,
             "nametutor": nametutor.value,
             "apaternotutor": apaternotutor.value,

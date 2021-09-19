@@ -107,8 +107,7 @@ function show(user) {
             <button class="btn btn-outline-dark" onclick="singOut()">Cerrar</button>
           </div>
         </div>
-      </div>
-    `;
+      </div>`;
   }
 
-    
+  }   

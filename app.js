@@ -126,7 +126,7 @@ function observer(){
       content.innerHTML = `
       <div class="container mt-5">
         <div class="card">
-          <h5 class="card-header">Bienvenido al sistema de registro y descarga de documentación, por favor sigue las siguientes instrucciones:</h5>
+          <h5 class="card-header">Bienvenido al sistema INTERNO para registro de tutores y menores:</h5>
           <div class="card-body">
             <p>1. Entra con tu correo y contrasseña registrados.</p>
             <p>2. Si no estás registrado haz clic en el botón "REGISTRARME".</p>

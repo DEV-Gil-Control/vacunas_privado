@@ -1,15 +1,6 @@
 //- - - - - - - get data DOS- - - - - - - - - - - - - //
 var get_user = function(email) {
    var db = firebase.firestore();
-   db.collection("users").where("email", "==", email) 
-   .get() 
-   .then((querySnapshot) => {
-   querySnapshot.forEach((doc) => {
-   // doc.data() is never undefined for query doc snapshots
-   console.log(doc.id, " => ", doc.data());
-
-var get_user = function(email) {
-   var db = firebase.firestore();
    db.collection("messages").where("email", "==", email) 
    .get() 
    .then((querySnapshot) => {

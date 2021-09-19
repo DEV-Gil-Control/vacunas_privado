@@ -109,5 +109,5 @@ function show(user) {
         </div>
       </div>`;
   }
-
-  }   
+}
+}   

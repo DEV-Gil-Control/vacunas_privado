@@ -1,7 +1,7 @@
 //- - - - - - - get data DOS- - - - - - - - - - - - - //
 var get_user = function(email) {
    var db = firebase.firestore();
-   db.collection("messages", "users").where("email", "==", email) 
+   db.collection("users").where("email", "==", email) 
 
    .get() 
    .then((querySnapshot) => {
@@ -23,7 +23,7 @@ var push_to_firebase = function(data){
         alert("Registro creado exitosamente")
         var db = firebase.firestore();
 
-        db.collection("messages").add({
+        db.collection("users").add({
             namemenor: data["namemenor"],
             apaternomenor: data["apaternomenor"],
             amaternomenor: data["amaternomenor"],

@@ -37,8 +37,8 @@ var push_to_firebase = function(data){
             namemenor: data["namemenor"],
             apaternomenor: data["apaternomenor"],
             amaternomenor: data["amaternomenor"],
-            curpmenor: data["curpmenor"],
-            edadmenor: data["edadmenor"],
+           edadmenor: data["edadmenor"], 
+           curpmenor: data["curpmenor"],
               nametutor: data["nametutor"],
               apaternotutor: data["apaternotutor"],
               amaternotutor: data["amaternotutor"],
@@ -66,8 +66,8 @@ var push_to_firebase = function(data){
         var namemenor = document.getElementById("namemenor");
         var apaternomenor = document.getElementById("apaternomenor");
         var amaternomenor = document.getElementById("amaternomenor");
+         var edadmenor = document.getElementById("edadmenor");
         var curpmenor = document.getElementById("curpmenor"); 
-         var edadmenor = document.getElementById("edademenor");
           var nametutor = document.getElementById("nametutor");
           var apaternotutor = document.getElementById("apaternotutor");
           var amaternotutor = document.getElementById("amaternotutor");

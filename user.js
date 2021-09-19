@@ -11,7 +11,9 @@ var get_user = function(email) {
        menor.innerHTML = `<div>Menor registrado: ${doc.data().namemenor} ${doc.data().apaternomenor} ${doc.data().amaternomenor}</div>
        <div>CURP: ${doc.data().curpmenor}</div>
        <div>Tutor registrado: ${doc.data().nametutor} ${doc.data().apaternotutor} ${doc.data().amaternotutor}</div>
-       <div>Correo Electrónico: ${doc.data().mailtutor}</div>`;
+       <div>Correo Electrónico: ${doc.data().mailtutor}</div>
+       <div><button class="btn btn-outline-dark" onclick="location.href = 'legal.html'">Ver e imprimir Aviso de Privacidad</button></div>
+       `;
        var tutor = document.getElementById("tutor");
        tutor.innerHTML = `<div>${doc.data().nametutor} ${doc.data().apaternotutor} ${doc.data().amaternotutor}</div>
        <div>Correo Electrónico: ${doc.data().email}</div>

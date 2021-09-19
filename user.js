@@ -23,7 +23,7 @@ var push_to_firebase = function(data){
         alert("Registro creado exitosamente")
         var db = firebase.firestore();
 
-        db.collection("users").add({
+        db.collection("menores").add({
             namemenor: data["namemenor"],
             apaternomenor: data["apaternomenor"],
             amaternomenor: data["amaternomenor"],

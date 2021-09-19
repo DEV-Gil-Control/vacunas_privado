@@ -14,7 +14,37 @@ function register(){
 }
 
     
-        //- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -//
+//- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -//
+
+var push_to_firebase = function(data){
+        alert("Registro creado exitosamente, continúa para descargar el documento")
+        var db = firebase.firestore();
+
+        db.collection("messages").add({
+            email: data["email"],
+            timestamp: Date.now()
+        })
+        .then(function(docRef) {
+            console.log("Message sent, ID: ", docRef.id);
+            location.reload();
+        })
+        .catch(function(error) {
+            console.error("Message could not be sent: ", error);
+        });
+      }
+
+      var contact_submit = function(){
+           var email = document.getElementById("email");
+
+        var data = {
+            "email": email.value
+        }
+        push_to_firebase(data);
+          
+
+      }
+      
+    document.getElementById("submit_msg").addEventListener("click", contact_submit);
 
 
     //- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -//

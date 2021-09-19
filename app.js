@@ -16,42 +16,6 @@ function register(){
     
         //- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -//
 
-var push_to_firebase = function(data){
-        alert("Registro creado exitosamente, continúa para descargar el documento")
-        var db = firebase.firestore();
-
-        db.collection("messages").add({
-            email: data["email"],
-            namemenor: data["namemenor"],
-            edadmenor: data["edadmenor"],
-            apaternomenor: data["apaternomenor"],
-            amaternomenor: data["amaternomenor"],
-            curpmenor: data["curpmenor"],
-              nametutor: data["nametutor"],
-              apaternotutor: data["apaternotutor"],
-              amaternotutor: data["amaternotutor"],
-              domiciliotutor: data["domiciliotutor"],
-              coloniatutor: data["coloniatutor"],
-              cptutor: data["cptutor"],
-              mpiotutor: data["mpiotutor"],
-              teltutor: data["teltutor"],
-              celtutor: data["celtutor"],
-              redtutor: data["redtutor"],
-            mailtutor: data["mailtutor"],
-            timestamp: Date.now()
-        })
-        .then(function(docRef) {
-            console.log("Message sent, ID: ", docRef.id);
-            location.reload();
-        })
-        .catch(function(error) {
-            console.error("Message could not be sent: ", error);
-        });
-
-      }
-      
-//document.getElementById("submit_msg").addEventListener("click", contact_submit);
-
 
     //- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -//
 

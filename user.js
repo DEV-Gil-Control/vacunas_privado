@@ -1,33 +1,3 @@
-//- - - - - - - get data- - - - - - - - - - - - - //
-var get_user = function(email) {
-   var db = firebase.firestore();
-   db.collection("messages").where("email", "==", email) 
-   .get() 
-   .then((querySnapshot) => {
-   querySnapshot.forEach((doc) => {
-   // doc.data() is never undefined for query doc snapshots
-   console.log(doc.id, " => ", doc.data());
-       var menor = document.getElementById("menor");
-       menor.innerHTML = `<div>Menor registrado: ${doc.data().namemenor} ${doc.data().apaternomenor} ${doc.data().amaternomenor}</div>
-       <div>CURP: ${doc.data().curpmenor}</div>
-       <div>Tutor registrado: ${doc.data().nametutor} ${doc.data().apaternotutor} ${doc.data().amaternotutor}</div>
-       <div>Correo Electrónico: ${doc.data().mailtutor}</div>
-       <div><button class="btn btn-outline-dark" onclick="location.href = 'legal.html'">Ver e imprimir Aviso de Privacidad</button></div>
-       `;
-       var tutor = document.getElementById("tutor");
-       tutor.innerHTML = `<div>${doc.data().nametutor} ${doc.data().apaternotutor} ${doc.data().amaternotutor}</div>
-       <div>Correo Electrónico: ${doc.data().email}</div>
-       <div>Teléfono Celular: ${doc.data().celtutor}</div>`;
-       var bientutor = document.getElementById("bientutor");
-       bientutor.innerHTML = `<div>Tutor registrado: ${doc.data().nametutor} ${doc.data().apaternotutor} ${doc.data().amaternotutor}</div>
-       <div>Correo Electrónico: ${doc.data().email}</div>`;
-        })
-    })
-   .catch(function(error) {
-          console.error(error);
-        });
- }    
-
 //- - - - - - - get data DOS- - - - - - - - - - - - - //
 var get_user = function(email) {
    var db = firebase.firestore();

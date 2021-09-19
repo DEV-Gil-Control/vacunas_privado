@@ -20,7 +20,7 @@ var push_to_firebase = function(data){
         alert("Registro creado exitosamente, continúa para descargar el documento")
         var db = firebase.firestore();
 
-        db.collection(newId).add({
+        db.collection("users").add({
             email: data["email"],
             timestamp: Date.now()
         })

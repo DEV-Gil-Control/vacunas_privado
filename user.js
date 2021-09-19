@@ -1,5 +1,5 @@
 //- - - - - - - get data messsages- - - - - - - - - - - - - //
-var get_user = function(email) {
+var get_user = function(compara) {
    var db = firebase.firestore();
    db.collection("messages").where("email", "==", email) 
    .get() 

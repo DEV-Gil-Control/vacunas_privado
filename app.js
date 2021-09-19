@@ -98,6 +98,16 @@ function show(user) {
   if (user.emailVerified) {
     location.href = 'user.html'
   }else{
-location.href = 'user.html'
+    content.innerHTML = `
+      <div class="container mt-5">
+        <div class="card">
+          <h5 class="card-header">Bienvenido ${user.email}</h5>
+          <div class="card-body">
+            <p class="card-text">Ingresa a tu email y verifica tu cuenta por favor.</p>
+            <button class="btn btn-outline-dark" onclick="singOut()">Cerrar</button>
+          </div>
+        </div>
+      </div>
+    `;
   }
 }

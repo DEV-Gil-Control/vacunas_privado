@@ -14,7 +14,8 @@ var get_user = function(email) {
        <div>Tutor registrado: ${doc.data().nametutor} ${doc.data().apaternotutor} ${doc.data().amaternotutor}</div>
        <div>Correo Electrónico: ${doc.data().mailtutor}</div>`;
        })
-       menord.innerHTML = `<div>ID: ${doc.id}</div>
+      var menord = document.getElementById("menord"); 
+      enord.innerHTML = `<div>ID: ${doc.id}</div>
        <div>Menor registrado: ${doc.data().namemenor} ${doc.data().apaternomenor} ${doc.data().amaternomenor}</div>
        <div>CURP: ${doc.data().curpmenor}</div>
        <div>Tutor registrado: ${doc.data().nametutor} ${doc.data().apaternotutor} ${doc.data().amaternotutor}</div>

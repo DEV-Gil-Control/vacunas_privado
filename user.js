@@ -11,7 +11,7 @@ function getdata() {
     //firebase data retrieval function
     //path of your data
     //.once will get all your data in one time
-    firebase.database().ref('messages).once('value').then(function (snapshot) {
+    firebase.database().ref('messages').once('value').then(function (snapshot) {
         //here we will get data
         //enter your field name
         var name=snapshot.val().namemenor;

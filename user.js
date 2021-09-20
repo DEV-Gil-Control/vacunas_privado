@@ -1,24 +1,4 @@
 //- - - - - - - get data- - - - - - - - - - - - - //
-var get_user = function(email) {
-   var db = firebase.firestore();
-   db.collection("messages").where("email", "==", email) 
-   .get()
-   .then((querySnapshot) => {
-   querySnapshot.forEach((doc) => {
-   // doc.data() is never undefined for query doc snapshots
-   console.log(doc.id, " => ", doc.data());
-       var menor = document.getElementById("menor");
-       menor.innerHTML = `<div>Menor registrado: ${doc.data().namemenor} ${doc.data().apaternomenor} ${doc.data().amaternomenor}</div>
-       <div>CURP: ${doc.data().curpmenor}</div>
-       <div>Tutor registrado: ${doc.data().nametutor} ${doc.data().apaternotutor} ${doc.data().amaternotutor}</div>
-       <div>Correo Electrónico: ${doc.data().mailtutor}</div>`;
-        })
-    })
-   .catch(function(error) {
-          console.error(error);
-        });
- }
-
 db.collection("messages").get().then((querySnapshot) => {
     querySnapshot.forEach((doc) => {
         console.log(`${doc.id} => ${doc.data()}`);

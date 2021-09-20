@@ -10,7 +10,7 @@ var get_user = function(email) {
 
 //ref.on("value", function(snapshot) {
     var childData = snapshot.val();
-    var key = Object.keys(childData)[1];    //this will return 1st key.         
+    var key = Object.keys(childData)[2];    //this will return 1st key.         
     console.log(childData[key].id);
 });
         })

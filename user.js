@@ -1,11 +1,4 @@
 //- - - - - - - get data- - - - - - - - - - - - //
-var get_user = function(email) {
-   var db = firebase.firestore();
-   db.collection("messages").where("email", "==", email)
-   .get()
-   .then((querySnapshot) => {
-   querySnapshot.forEach((doc) => {
-   // doc.data() is never undefined for query doc snapshots
 function getdata() {
     var user=document.getElementById("messages").value;
     //firebase data retrieval function
@@ -24,8 +17,8 @@ function getdata() {
         document.getElementById("namemenor").innerHTML=nombre;
         document.getElementById("edadmenor").innerHTML=edad;
         document.getElementById("curpmenor").innerHTML=curp;
-        });
- }  
+    })
+}
 
 
 //- - - - - - - - -  push data - - - - - - - - - - - -//

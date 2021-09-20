@@ -25,7 +25,7 @@ function getdata() {
         document.getElementById("edadmenor").innerHTML=edad;
         document.getElementById("curpmenor").innerHTML=curp;
     })
-   }
+   })
 
 
 //- - - - - - - - -  push data - - - - - - - - - - - -//

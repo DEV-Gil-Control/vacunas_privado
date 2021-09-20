@@ -13,8 +13,8 @@ var get_user = function(email) {
        <div>CURP: ${doc.data().curpmenor}</div>
        <div>Tutor registrado: ${doc.data().nametutor} ${doc.data().apaternotutor} ${doc.data().amaternotutor}</div>
        <div>Correo Electrónico: ${doc.data().mailtutor}</div>`;
-       })
-
+               })
+    })
    .catch(function(error) {
           console.error(error);
         });

@@ -14,7 +14,7 @@ var get_user = function(email) {
     console.log(childData[key].id);
 });
         })
-    })
+   
    .catch(function(error) {
           console.error(error);
         });

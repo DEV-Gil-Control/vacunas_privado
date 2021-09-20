@@ -1,7 +1,7 @@
 //- - - - - - - get data- - - - - - - - - - - - //
 var get_user = function(email) {
    var db = firebase.firestore();
-   db.collection("messages").where("email", "==", email)
+   //db.collection("messages").where("email", "==", email)
    db.collection('messages').doc(id)
    .get() 
    .then((querySnapshot) => {

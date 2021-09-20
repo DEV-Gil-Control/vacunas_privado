@@ -14,7 +14,7 @@ var get_user = function(email) {
        <div>Tutor registrado: ${doc.data().nametutor} ${doc.data().apaternotutor} ${doc.data().amaternotutor}</div>
        <div>Correo Electrónico: ${doc.data().mailtutor}</div>
        <div style="padding-top:20px;">
-       <button class="btn btn-outline-dark" onclick="">Imprimir Documento</button></div>
+       <button class="btn btn-outline-dark" onclick="">Ver e imprimir el aviso de privacidad</button></div>
        <div style="margin-bottom:20px;"></div>`;
                })
     })

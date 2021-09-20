@@ -1,10 +1,25 @@
 //- - - - - - - get data- - - - - - - - - - - - - //
+var get_user = function(email) {
+   var db = firebase.firestore();
+   db.collection("messages").where("email", "==", email) 
+   .get() 
+   .then((querySnapshot) => {
+   querySnapshot.forEach((doc) => {
+   // doc.data() is never undefined for query doc snapshots
+   console.log(doc.id, " => ", doc.data());
 var ref = firebase.database().ref("messages");
 ref.on("value", function(snapshot) {
     var childData = snapshot.val();
     var key = Object.keys(childData)[0];    //this will return 1st key.         
     console.log(childData[key].id);
 });
+   .catch(function(error) {
+          console.error(error);
+        });
+ }
+
+
+
 
 //- - - - - - - - -  push data - - - - - - - - - - - -//
 

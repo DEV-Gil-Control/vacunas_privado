@@ -6,19 +6,26 @@ var get_user = function(email) {
    .then((querySnapshot) => {
    querySnapshot.forEach((doc) => {
    // doc.data() is never undefined for query doc snapshots
-   console.log(doc.id, " => ", doc.data());
-       var menor = document.getElementById("menor");
-       menor.innerHTML = `<div>ID: ${doc.id}</div>
-       <div>Menor registrado: ${doc.data().namemenor} ${doc.data().apaternomenor} ${doc.data().amaternomenor}</div>
-       <div>CURP: ${doc.data().curpmenor}</div>
-       <div>Tutor registrado: ${doc.data().nametutor} ${doc.data().apaternotutor} ${doc.data().amaternotutor}</div>
-       <div>Correo Electrónico: ${doc.data().mailtutor}</div>`;
-        })
+function getdata() {
+    var user=document.getElementById("messages").value;
+    //firebase data retrieval function
+    //path of your data
+    //.once will get all your data in one time
+    firebase.database().ref('messages).once('value').then(function (snapshot) {
+        //here we will get data
+        //enter your field name
+        var name=snapshot.val().namemenor;
+        var gender=snapshot.val().edadmenor;
+        var country=snapshot.val().curpmenor;
+
+        //now we have data in variables
+        //now show them in our html
+
+        document.getElementById("namemenor").innerHTML=nombre;
+        document.getElementById("edadmenor").innerHTML=edad;
+        document.getElementById("curpmenor").innerHTML=curp;
     })
-   .catch(function(error) {
-          console.error(error);
-        });
- }  
+}
 
 //- - - - - - - - -  push data - - - - - - - - - - - -//
 
@@ -187,8 +194,10 @@ function show(user) {
             <div id="bientutor" style="margin-left:22px; margin-top:20px; font-weight: bold;">
             </div>
           <div class="card-body">
-            <div id="menor" class="shadow-none p-3 mb-5 bg-light rounded">
-            </div>
+    <p>Name: <strong id="nombre"></strong></p>
+    <p>Gender: <strong id="edad"></strong></p>
+    <p>Country: <strong id="curp"></strong></p>
+           </div>
               <div style="padding-top:20px;">
               <button class="btn btn-outline-dark" onclick="singOut()">Cerrar Sesión</button>
               </div>

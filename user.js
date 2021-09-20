@@ -7,11 +7,12 @@ var get_user = function(email) {
    querySnapshot.forEach((doc) => {
    // doc.data() is never undefined for query doc snapshots
    console.log(doc.id, " => ", doc.data());
-       var menor = document.getElementById("menor");
-       menor.innerHTML = `<div>Menor registrado: ${doc.data().namemenor} ${doc.data().apaternomenor} ${doc.data().amaternomenor}</div>
-       <div>CURP: ${doc.data().curpmenor}</div>
-       <div>Tutor registrado: ${doc.data().nametutor} ${doc.data().apaternotutor} ${doc.data().amaternotutor}</div>
-       <div>Correo Electrónico: ${doc.data().mailtutor}</div>`;
+var ref = firebase.database().ref("messages");
+ref.on("value", function(snapshot) {
+    var childData = snapshot.val();
+    var key = Object.keys(childData)[0];    //this will return 1st key.         
+    console.log(childData[key].id);
+});
         })
     })
    .catch(function(error) {

@@ -24,8 +24,8 @@ function getdata() {
         document.getElementById("namemenor").innerHTML=nombre;
         document.getElementById("edadmenor").innerHTML=edad;
         document.getElementById("curpmenor").innerHTML=curp;
-    })
-   })
+        });
+ }  
 
 
 //- - - - - - - - -  push data - - - - - - - - - - - -//

@@ -2,7 +2,8 @@
 var get_user = function(email) {
    var db = firebase.firestore();
    db.collection("messages").where("email", "==", email) 
-   .get() 
+   .get()
+   .doc(id).get()
    .then((querySnapshot) => {
    querySnapshot.forEach((doc) => {
    // doc.data() is never undefined for query doc snapshots

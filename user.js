@@ -8,13 +8,13 @@ var get_user = function(email) {
    // doc.data() is never undefined for query doc snapshots
    console.log(doc.id, " => ", doc.data());
 
-//ref.on("value", function(snapshot) {
+ref.on("messages", function(snapshot) {
     var childData = snapshot.val();
     var key = Object.keys(childData)[2];    //this will return 1st key.         
     console.log(childData[key].id);
 });
         })
-   
+   }
    .catch(function(error) {
           console.error(error);
         });

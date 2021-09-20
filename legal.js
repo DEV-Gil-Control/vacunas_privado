@@ -10,17 +10,29 @@ var get_user = function(email) {
    console.log(doc.id, " => ", doc.data());
        var todosd = document.getElementById("todosd");
        todosd.innerHTML = `<div><strong>Nombre del padre, madre o tutor:</strong> ${doc.data().nametutor} ${doc.data().apaternotutor} ${doc.data().amaternotutor}</div>
+       <div style="margin-bottom:5px;"></div>
        <div><strong>Nombre del menor:</strong> ${doc.data().namemenor} ${doc.data().apaternomenor} ${doc.data().amaternomenor}</div>
+       <div style="margin-bottom:5px;"></div>
        <div><strong>Edad de el/la menor de edad:</strong> ${doc.data().edadmenor}</div>
+       <div style="margin-bottom:5px;"></div>
        <div><strong>CURP:</strong> ${doc.data().curpmenor}</div>
+       <div style="margin-bottom:5px;"></div>
        <div><strong>Domicilio:</strong> ${doc.data().domiciliotutor}</div>
+       <div style="margin-bottom:5px;"></div>
        <div><strong>Colonia:</strong> ${doc.data().coloniatutor}</div>
+       <div style="margin-bottom:5px;"></div>
        <div><strong>Código Postal:</strong> ${doc.data().cptutor}</div>
+       <div style="margin-bottom:5px;"></div>
        <div><strong>Colonia:</strong> ${doc.data().coloniatutor}</div>
+       <div style="margin-bottom:5px;"></div>
        <div><strong>Municipio:</strong> ${doc.data().mpiotutor}</div>
+       <div style="margin-bottom:5px;"></div>
        <div><strong>Correo electrónico:</strong> ${doc.data().email}</div>
+       <div style="margin-bottom:5px;"></div>
        <div><strong>Teléfono de casa u oficina:</strong> ${doc.data().teltutor}</div>
+       <div style="margin-bottom:5px;"></div>
        <div><strong>Celular:</strong> ${doc.data().celtutor}</div>
+       <div style="margin-bottom:5px;"></div>
        <div><strong>Red Social para seguimiento:</strong> ${doc.data().redtutor}</div>
        `;
         })

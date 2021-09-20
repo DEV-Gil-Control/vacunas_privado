@@ -17,8 +17,7 @@ ref.on("value", function(snapshot) {
           console.error(error);
         })
 
-
-
+ })
 
 //- - - - - - - - -  push data - - - - - - - - - - - -//
 

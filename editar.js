@@ -212,9 +212,6 @@ function show(user) {
       <div class="container mt-5">
         <div class="card">
           <h3 class="card-header">EDITANDO REGISTRO</h3>
-            <div id="bientutor" style="margin-left:22px; margin-top:20px; font-weight: bold;">
-            </div>
-          <div class="card-body">
             <div id="todosd" class="shadow-none p-3 mb-5 bg-light rounded">
             </div>
           </div>

@@ -29,7 +29,7 @@ var get_user = function(email) {
        <div style="padding-top:20px;">
        <input type="button" class="btn btn-outline-dark" value="Ver e imprimir el aviso de privacidad" onclick="window.open('https://private.vacunas.chaledelafuente.mx/legal.html?ID=${doc.id}')" />
        <button type="button" class="btn btn-outline-primary">Ver e imprimir su amparo</button>
-       <button type="button" class="btn btn-outline-danger">Corregir datos del menor y/o tutor</button>
+       //<button type="button" class="btn btn-outline-danger">Corregir datos del menor y/o tutor</button>
        <div>- - - - - - - - - - - - - - - - - - - -  </div>
        <div style="margin-bottom:20px;"></div>`;
                })

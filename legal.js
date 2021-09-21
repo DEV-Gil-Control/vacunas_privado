@@ -2,7 +2,6 @@
 function doc.id(){
    var urlParams = new URLSearchParams(window.location.search)
    console.log(urlParams.getAll('ID')); // true
-  });
 }
 //- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -//
 

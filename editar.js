@@ -19,7 +19,6 @@ var get_user = function(email) {
    // doc.data() is never undefined for query doc snapshots
    //console.log(doc.id, " => ", doc.data());  
        var todosd = document.getElementById("todosd");
-       //document.urlParams.getAll('ID') ("todosd");
        todosd.innerHTML = `
        <div style="padding-top:20px;">
        <div><strong>Menor registrado:</strong></div>
@@ -73,7 +72,7 @@ var push_to_firebase = function(data){
         alert("Actualizado exitosamente")
         var db = firebase.firestore();
 
-        db.collection("messages").doc(myParam).update({
+        db.collection("messages").doc("myParam").update({
         namemenor: data["namemenor"],
         })
       

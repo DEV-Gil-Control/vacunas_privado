@@ -11,8 +11,8 @@ var get_user = function(email) {
    const myParam = urlParams.get('ID');
    console.log(myParam);
    var db = firebase.firestore();
-   db.collection("messages").doc(myParam) 
-   .get() 
+   db.collection("messages") 
+   .get(myParam) 
    .then((querySnapshot) => {
    console.log(querySnapshot);   
    querySnapshot.forEach((doc) => {

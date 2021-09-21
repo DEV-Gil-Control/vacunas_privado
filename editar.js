@@ -41,8 +41,8 @@ var get_user = function(email) {
        <div>Correo Electrónico: ${doc.data().mailtutor}</div>
        <div>Red social: ${doc.data().redtutor}</div>
        <div style="padding-top:20px;">
-       <button type="button" class="btn btn-outline-warning">Guardar Cambios</button>
-       <button type="button" class="btn btn-outline-danger">FInalizar Edición</button>
+       <button type="button" class="btn btn-warning">Guardar Cambios</button>
+       <button type="button" class="btn btn-danger">FInalizar Edición</button>
        <div>- - - - - - - - - - - - - - - - - - - -  </div>
        <div style="margin-bottom:20px;"></div>`;
         //})

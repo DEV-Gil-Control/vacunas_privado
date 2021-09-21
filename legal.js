@@ -16,7 +16,7 @@ var get_user = function(email) {
      console.log(doc.id, " => ", doc.data());
        var todosd = document.getElementById("todosd");
        //document.urlParams.getAll('ID') ("todosd");
-       todosd.innerHTML = b8M06MfhoHFxVxx5csNr `<div><strong>Nombre del padre, madre o tutor:</strong> ${doc.data().nametutor} ${doc.data().apaternotutor} ${doc.data().amaternotutor}</div>
+       todosd.innerHTML = document.urlParams.getAll('ID'); `<div><strong>Nombre del padre, madre o tutor:</strong> ${doc.data().nametutor} ${doc.data().apaternotutor} ${doc.data().amaternotutor}</div>
        <div style="margin-bottom:5px;"></div>
        <div><strong>Nombre del menor:</strong> ${doc.data().namemenor} ${doc.data().apaternomenor} ${doc.data().amaternomenor}</div>
        <div style="margin-bottom:5px;"></div>

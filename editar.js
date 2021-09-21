@@ -97,7 +97,7 @@ var push_to_firebase = function(data){
         .catch(function(error) {
             console.error("Message could not be sent: ", error);
         });
-      }
+      })
 
       var contact_submit = function(){
 

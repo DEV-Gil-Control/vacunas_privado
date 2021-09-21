@@ -25,7 +25,7 @@ var get_user = function(email) {
        <div><strong>Menor registrado:</strong></div>
        <div>Nombre del Niño/Niña: ${doc.data().namemenor}
        <label for="namemenor"></label>
-       <input type="text" id="namemenor" name="namemenor" placeholder="Cambiar Nombre completo" style="width: 50%; margin-left:10px;">
+       <input type="text" id="namemenor" name="namemenor" placeholder="NUEVO Nombre de Niño/Niña" style="width: 50%; margin-top:-5px;">
        </div>
        <div>Apellido paterno: ${doc.data().apaternomenor}</div>
        <div>Apellido Materno: ${doc.data().amaternomenor}</div>

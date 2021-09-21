@@ -30,9 +30,8 @@ var doclegal = new URL("https://private.vacunas.chaledelafuente.mx/legal.html/${
 url.searchParams.append(${doc.id});
 
 // If your expected result is "http://foo.bar/?x=42&y=2"
-url.searchParams.set(${doc.id});
+url.searchParams.set(${doc.id}));
 
- });
 //- - - - - - - - - - - - - - - - -  - - - - - - - - - - - -//
 
 

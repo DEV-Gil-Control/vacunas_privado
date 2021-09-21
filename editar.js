@@ -132,6 +132,41 @@ var push_to_firebase = function(data){
 
 
     //- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -//
+      
+      
+  //- - - - - - - - -  update data - - - - - - - - - - - -//
+
+var update_to_firebase = function(data){
+        alert("Actualizado exitosamente")
+        var db = firebase.firestore();
+
+        db.collection("messages").update({
+            namemenor: data["namemenor"],
+        })
+        .then(function(docRef) {
+            console.log("Message sent, ID: ", docRef.id);
+            location.reload();
+        })
+        .catch(function(error) {
+            console.error("Message could not be sent: ", error);
+        });
+      }
+
+      var update_submit = function(){
+
+        var namemenor = document.getElementById("namemenor");
+        
+        var data = {
+
+          "namemenor": namemenor.value
+        }
+        update_to_firebase(data);
+          
+
+      }
+      
+    //  document.getElementById("submit_msg").addEventListener("click", contact_submit);    
+      
 
 function login() {
   var email = document.getElementById("email_login").value;

@@ -1,28 +1,52 @@
+//- - - - - - - LEER QUERY - - - - - - - - - - //
+//function queryID(){
+const urlParams = new URLSearchParams(window.location.search);
+const myParam = urlParams.get('ID');
+//}
+//- - - - - - - - - - - - - - - - - - - - - - - - - - - - - -//
+
 //- - - - - - - get data- - - - - - - - - - - - - //
 var get_user = function(email) {
+   const urlParams = new URLSearchParams(window.location.search);
+   const myParam = urlParams.get('ID');
+   console.log(myParam);
    var db = firebase.firestore();
-   db.collection("messages").where("email", "==", email) 
-   .get() 
-   .then((querySnapshot) => {
-   querySnapshot.forEach((doc) => {
+   db.collection("messages").doc(myParam)
+   .get()
+   .then((doc) => {
+   console.log(doc.data());     
+   //querySnapshot.forEach((doc) => {
    // doc.data() is never undefined for query doc snapshots
-   console.log(doc.id, " => ", doc.data());
+   //console.log(doc.id, " => ", doc.data());  
        var todosd = document.getElementById("todosd");
-       todosd.innerHTML = `<div>Nombre del padre, madre o tutor: ${doc.data().nametutor} ${doc.data().apaternotutor} ${doc.data().amaternotutor}</div>
-       <div>Nombre del menor: ${doc.data().namemenor} ${doc.data().apaternomenor} ${doc.data().amaternomenor}</div>
-       <div>Edad de el/la menor de edad: ${doc.data().edadmenor}</div>
-       <div>CURP: ${doc.data().curpmenor}</div>
-       <div>Domicilio: ${doc.data().domiciliotutor}</div>
-       <div>Colonia: ${doc.data().coloniatutor}</div>
-       <div>Código Postal: ${doc.data().cptutor}</div>
-       <div>Colonia: ${doc.data().coloniatutor}</div>
-       <div>Municipio: ${doc.data().mpiotutor}</div>
-       <div>Correo electrónico: ${doc.data().email}</div>
-       <div>Teléfono de casa u oficina: ${doc.data().teltutor}</div>
-       <div>Celular: ${doc.data().celtutor}</div>
-       <div>Red Social para seguimiento: ${doc.data().redtutor}</div>
+       //document.urlParams.getAll('ID') ("todosd");
+       todosd.innerHTML = `<div><strong>Nombre del padre, madre o tutor:</strong> ${doc.data().nametutor} ${doc.data().apaternotutor} ${doc.data().amaternotutor}</div>
+       <div style="margin-bottom:5px;"></div>
+       <div><strong>Nombre del menor:</strong> ${doc.data().namemenor} ${doc.data().apaternomenor} ${doc.data().amaternomenor}</div>
+       <div style="margin-bottom:5px;"></div>
+       <div><strong>Edad de el/la menor de edad:</strong> ${doc.data().edadmenor}</div>
+       <div style="margin-bottom:5px;"></div>
+       <div><strong>CURP:</strong> ${doc.data().curpmenor}</div>
+       <div style="margin-bottom:5px;"></div>
+       <div><strong>Domicilio:</strong> ${doc.data().domiciliotutor}</div>
+       <div style="margin-bottom:5px;"></div>
+       <div><strong>Colonia:</strong> ${doc.data().coloniatutor}</div>
+       <div style="margin-bottom:5px;"></div>
+       <div><strong>Código Postal:</strong> ${doc.data().cptutor}</div>
+       <div style="margin-bottom:5px;"></div>
+       <div><strong>Colonia:</strong> ${doc.data().coloniatutor}</div>
+       <div style="margin-bottom:5px;"></div>
+       <div><strong>Municipio:</strong> ${doc.data().mpiotutor}</div>
+       <div style="margin-bottom:5px;"></div>
+       <div><strong>Correo electrónico:</strong> ${doc.data().email}</div>
+       <div style="margin-bottom:5px;"></div>
+       <div><strong>Teléfono de casa u oficina:</strong> ${doc.data().teltutor}</div>
+       <div style="margin-bottom:5px;"></div>
+       <div><strong>Celular:</strong> ${doc.data().celtutor}</div>
+       <div style="margin-bottom:5px;"></div>
+       <div><strong>Red Social para seguimiento:</strong> ${doc.data().redtutor}</div>
        `;
-        })
+        //})
     })
    .catch(function(error) {
           console.error(error);
@@ -31,6 +55,7 @@ var get_user = function(email) {
 
   
 
+    //- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -//
 
 //- - - - - - - - -  push data - - - - - - - - - - - -//
 
@@ -190,7 +215,7 @@ function show(user) {
     content.innerHTML = `
       <div class="container mt-5">
         <div class="card">
-          <h3 class="card-header">1. DATOS GENERALES</h3>
+          <h3 class="card-header">1. DATOS GENERALES DEL NIÑO/NIÑA A AMPARAR</h3>
             <div id="bientutor" style="margin-left:22px; margin-top:20px; font-weight: bold;">
             </div>
           <div class="card-body">

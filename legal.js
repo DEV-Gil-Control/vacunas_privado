@@ -11,9 +11,10 @@ var get_user = function(email) {
    const myParam = urlParams.get('ID');
    console.log(myParam);
    var db = firebase.firestore();
-   db.collection("messages").where("id", "==", myParam) 
+   db.collection("messages").doc(myParam) 
    .get() 
    .then((querySnapshot) => {
+   console.log(querySnapshot);   
    querySnapshot.forEach((doc) => {
    // doc.data() is never undefined for query doc snapshots
    console.log(doc.id, " => ", doc.data());  

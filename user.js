@@ -126,6 +126,89 @@ var push_to_firebase = function(data){
     //  document.getElementById("submit_msg").addEventListener("click", contact_submit);
 
 
+//- - - - - - - - -  update data - - - - - - - - - - - -//
+
+var push_to_firebase = function(data){
+        alert("Actualizado exitosamente")
+        var db = firebase.firestore();
+
+        db.collection("messages").update({
+            namemenor: data["namemenor"],
+            apaternomenor: data["apaternomenor"],
+            amaternomenor: data["amaternomenor"],
+           edadmenor: data["edadmenor"], 
+           curpmenor: data["curpmenor"],
+              nametutor: data["nametutor"],
+              apaternotutor: data["apaternotutor"],
+              amaternotutor: data["amaternotutor"],
+              domiciliotutor: data["domiciliotutor"],
+              coloniatutor: data["coloniatutor"],
+              cptutor: data["cptutor"],
+              mpiotutor: data["mpiotutor"],
+              teltutor: data["teltutor"],
+              celtutor: data["celtutor"],
+              redtutor: data["redtutor"],
+              mailtutor: data["mailtutor"],
+              email: data["email"],
+            timestamp: Date.now()
+        })
+        .then(function(docRef) {
+            console.log("Message sent, ID: ", docRef.id);
+            location.reload();
+        })
+        .catch(function(error) {
+            console.error("Message could not be sent: ", error);
+        });
+      }
+
+      var contact_submit = function(){
+
+        var namemenor = document.getElementById("namemenor");
+        var apaternomenor = document.getElementById("apaternomenor");
+        var amaternomenor = document.getElementById("amaternomenor");
+         var edadmenor = document.getElementById("edadmenor");
+        var curpmenor = document.getElementById("curpmenor"); 
+          var nametutor = document.getElementById("nametutor");
+          var apaternotutor = document.getElementById("apaternotutor");
+          var amaternotutor = document.getElementById("amaternotutor");
+          var domiciliotutor = document.getElementById("domiciliotutor");
+          var coloniatutor = document.getElementById("coloniatutor");
+          var cptutor = document.getElementById("cptutor");
+          var mpiotutor = document.getElementById("mpiotutor");
+          var teltutor = document.getElementById("teltutor");
+          var celtutor = document.getElementById("celtutor");
+          var redtutor = document.getElementById("redtutor");
+         var mailtutor = document.getElementById("mailtutor");
+         var email = document.getElementById("email");
+
+        var data = {
+
+          "namemenor": namemenor.value,
+          "apaternomenor": apaternomenor.value,
+          "amaternomenor": amaternomenor.value,
+           "edadmenor": edadmenor.value,
+          "curpmenor": curpmenor.value,
+            "nametutor": nametutor.value,
+            "apaternotutor": apaternotutor.value,
+            "amaternotutor": amaternotutor.value,
+            "domiciliotutor": domiciliotutor.value,
+            "coloniatutor": coloniatutor.value,
+            "cptutor": cptutor.value,
+            "mpiotutor": mpiotutor.value,
+            "teltutor": teltutor.value,
+            "celtutor": celtutor.value,
+            "redtutor": redtutor.value,
+            "mailtutor": mailtutor.value,
+           "email": email.value
+        }
+        push_to_firebase(data);
+          
+
+      }
+      
+    //  document.getElementById("submit_msg").addEventListener("click", contact_submit);
+
+
     //- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -//
 
 function login() {

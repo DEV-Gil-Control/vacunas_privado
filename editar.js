@@ -21,31 +21,28 @@ var get_user = function(email) {
        var todosd = document.getElementById("todosd");
        //document.urlParams.getAll('ID') ("todosd");
        todosd.innerHTML = `<div><strong>Nombre del padre, madre o tutor:</strong> ${doc.data().nametutor} ${doc.data().apaternotutor} ${doc.data().amaternotutor}</div>
-       <div style="margin-bottom:5px;"></div>
-       <div><strong>Nombre del menor:</strong> ${doc.data().namemenor} ${doc.data().apaternomenor} ${doc.data().amaternomenor}</div>
-       <div style="margin-bottom:5px;"></div>
-       <div><strong>Edad de el/la menor de edad:</strong> ${doc.data().edadmenor}</div>
-       <div style="margin-bottom:5px;"></div>
-       <div><strong>CURP:</strong> ${doc.data().curpmenor}</div>
-       <div style="margin-bottom:5px;"></div>
-       <div><strong>Domicilio:</strong> ${doc.data().domiciliotutor}</div>
-       <div style="margin-bottom:5px;"></div>
-       <div><strong>Colonia:</strong> ${doc.data().coloniatutor}</div>
-       <div style="margin-bottom:5px;"></div>
-       <div><strong>Código Postal:</strong> ${doc.data().cptutor}</div>
-       <div style="margin-bottom:5px;"></div>
-       <div><strong>Colonia:</strong> ${doc.data().coloniatutor}</div>
-       <div style="margin-bottom:5px;"></div>
-       <div><strong>Municipio:</strong> ${doc.data().mpiotutor}</div>
-       <div style="margin-bottom:5px;"></div>
-       <div><strong>Correo electrónico:</strong> ${doc.data().email}</div>
-       <div style="margin-bottom:5px;"></div>
-       <div><strong>Teléfono de casa u oficina:</strong> ${doc.data().teltutor}</div>
-       <div style="margin-bottom:5px;"></div>
-       <div><strong>Celular:</strong> ${doc.data().celtutor}</div>
-       <div style="margin-bottom:5px;"></div>
-       <div><strong>Red Social para seguimiento:</strong> ${doc.data().redtutor}</div>
-       `;
+       <div style="padding-top:20px;">
+       <div><strong>Menor registrado:</strong></div>
+       <div>Nombre del Niño/Niña: ${doc.data().namemenor}</div>
+       <div>Apellido paterno: ${doc.data().apaternomenor}</div>
+       <div>Apellido Materno: ${doc.data().amaternomenor}</div>
+       <div>Edad: ${doc.data().edadmenor}</div>
+       <div>CURP: ${doc.data().curpmenor}</div>
+       <div style="padding-top:20px;">
+       <div><strong>Tutor registrado:</strong></div>
+       <div>Nombre: ${doc.data().nametutor}</div>
+       <div>Apellido paterno: ${doc.data().apaternotutor}</div>
+       <div>Apellido materno: ${doc.data().amaternotutor}</div>
+       <div>Domicilio: ${doc.data().domicliotutor}</div>
+       <div>Colonia: ${doc.data().teltutor}</div>
+       <div>Tel. casa u oficna: ${doc.data().teltutor}</div>
+       <div>Celular: ${doc.data().celtutor}</div>
+       <div>Correo Electrónico: ${doc.data().mailtutor}</div>
+       <div style="padding-top:20px;">
+       <input type="button" class="btn btn-outline-dark" value="Ver e imprimir el aviso de privacidad" onclick="window.open('https://private.vacunas.chaledelafuente.mx/legal.html?ID=${doc.id}')" />
+       <button type="button" class="btn btn-outline-primary">Ver e imprimir su amparo</button>
+       <div>- - - - - - - - - - - - - - - - - - - -  </div>
+       <div style="margin-bottom:20px;"></div>`;
         //})
     })
    .catch(function(error) {

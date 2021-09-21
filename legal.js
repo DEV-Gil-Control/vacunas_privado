@@ -1,8 +1,6 @@
 //- - - - - - - LEER QUERY - - - - - - - - - - //
-function docID(){
-   var urlParams = new URLSearchParams(window.location.search)
+var urlParams = new URLSearchParams(window.location.search)
    console.log(urlParams.getAll('ID')); // true
-}
 //- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -//
 
 //- - - - - - - get data- - - - - - - - - - - - - //
@@ -13,7 +11,7 @@ var get_user = function(email) {
    .then((querySnapshot) => {
    querySnapshot.forEach((doc) => {
    // doc.data() is never undefined for query doc snapshots
-   console.log((where(doc.id, "==", docID)), " => ", doc.data());
+    console.log(doc.id, " => ", doc.data());
        var todosd = document.getElementById("todosd");
        todosd.innerHTML = `<div><strong>Nombre del padre, madre o tutor:</strong> ${doc.data().nametutor} ${doc.data().apaternotutor} ${doc.data().amaternotutor}</div>
        <div style="margin-bottom:5px;"></div>

@@ -161,7 +161,7 @@ var update_to_firebase = function(data){
         });
       }
 
-      var contact_submit = function(){
+      var update_submit = function(){
 
         var namemenor = document.getElementById("namemenor");
         var apaternomenor = document.getElementById("apaternomenor");

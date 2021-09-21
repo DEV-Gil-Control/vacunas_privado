@@ -27,7 +27,7 @@ var get_user = function(email) {
 var doclegal = new URL("https://private.vacunas.chaledelafuente.mx/legal.html/${doc.id}");
 
 // If your expected result is "http://foo.bar/?x=1&y=2&x=42"
-url.searchParams.append(${doc.id});
+url.searchParams.append(${doc.id}));
 
 // If your expected result is "http://foo.bar/?x=42&y=2"
 url.searchParams.set(${doc.id}));

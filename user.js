@@ -42,15 +42,31 @@ var get_user = function(email) {
 
 //- - - - - - - - - - - - - - - - -  - - - - - - - - - - - -//
 
-
-//- - - - - - - - -  push data - - - - - - - - - - - -//
+//- - - - - - - - -  Push Data - - - - - - - - - - - -//
 
 var push_to_firebase = function(data){
-        alert("Registro creado exitosamente")
+        alert("Registro creado exitosamente, continúa para descargar el documento")
         var db = firebase.firestore();
 
         db.collection("messages").add({
-            namemenor: data["namemenor"],
+           namemenor: data["namemenor"],
+            apaternomenor: data["apaternomenor"],
+            amaternomenor: data["amaternomenor"],
+           edadmenor: data["edadmenor"], 
+           curpmenor: data["curpmenor"],
+              nametutor: data["nametutor"],
+              apaternotutor: data["apaternotutor"],
+              amaternotutor: data["amaternotutor"],
+              domiciliotutor: data["domiciliotutor"],
+              coloniatutor: data["coloniatutor"],
+              cptutor: data["cptutor"],
+              mpiotutor: data["mpiotutor"],
+              teltutor: data["teltutor"],
+              celtutor: data["celtutor"],
+              redtutor: data["redtutor"],
+              mailtutor: data["mailtutor"],
+              email: data["email"],
+            timestamp: Date.now()
         })
         .then(function(docRef) {
             console.log("Message sent, ID: ", docRef.id);
@@ -62,19 +78,51 @@ var push_to_firebase = function(data){
       }
 
       var contact_submit = function(){
+         
+         var namemenor = document.getElementById("namemenor");
+         var apaternomenor = document.getElementById("apaternomenor");
+         var amaternomenor = document.getElementById("amaternomenor");
+         var edadmenor = document.getElementById("edadmenor");
+         var curpmenor = document.getElementById("curpmenor"); 
+          var nametutor = document.getElementById("nametutor");
+          var apaternotutor = document.getElementById("apaternotutor");
+          var amaternotutor = document.getElementById("amaternotutor");
+          var domiciliotutor = document.getElementById("domiciliotutor");
+          var coloniatutor = document.getElementById("coloniatutor");
+          var cptutor = document.getElementById("cptutor");
+          var mpiotutor = document.getElementById("mpiotutor");
+          var teltutor = document.getElementById("teltutor");
+          var celtutor = document.getElementById("celtutor");
+          var redtutor = document.getElementById("redtutor");
+         var mailtutor = document.getElementById("mailtutor");
+         var email = document.getElementById("email");
 
-        var namemenor = document.getElementById("namemenor");
-        
         var data = {
-
-          "namemenor": namemenor.value,
+         "namemenor": namemenor.value,
+          "apaternomenor": apaternomenor.value,
+          "amaternomenor": amaternomenor.value,
+           "edadmenor": edadmenor.value,
+          "curpmenor": curpmenor.value,
+            "nametutor": nametutor.value,
+            "apaternotutor": apaternotutor.value,
+            "amaternotutor": amaternotutor.value,
+            "domiciliotutor": domiciliotutor.value,
+            "coloniatutor": coloniatutor.value,
+            "cptutor": cptutor.value,
+            "mpiotutor": mpiotutor.value,
+            "teltutor": teltutor.value,
+            "celtutor": celtutor.value,
+            "redtutor": redtutor.value,
+            "mailtutor": mailtutor.value,
+           "email": email.value
         }
         push_to_firebase(data);
           
 
       }
       
-    //  document.getElementById("submit_msg").addEventListener("click", contact_submit);
+   // document.getElementById("submit_msg").addEventListener("click", contact_submit);
+
 
 
 //- - - - - - - - -  update data - - - - - - - - - - - -//

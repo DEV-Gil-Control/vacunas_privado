@@ -1,20 +1,20 @@
 //- - - - - - - LEER QUERY - - - - - - - - - - //
 //function queryID(){
 var urlParams = new URLSearchParams(window.location.search)
-
+var Params = document.urlParams.getAll('ID');
+console.log(Params)
 //}
 //- - - - - - - - - - - - - - - - - - - - - - - - - - - - - -//
 
 //- - - - - - - get data- - - - - - - - - - - - - //
 var get_user = function(email) {
-  console.log(document.urlParams.getAll('ID')); 
    var db = firebase.firestore();
-   db.collection("messages").where("id", "==", document.urlParams.getAll('ID') )
+   db.collection("messages").where("email", "==", email) 
    .get() 
    .then((querySnapshot) => {
    querySnapshot.forEach((doc) => {
-    //doc.data() is never undefined for query doc snapshots
-    console.log(doc.id, " => ", doc.data());   
+   // doc.data() is never undefined for query doc snapshots
+   console.log(doc.id, " => ", doc.data());  
        var todosd = document.getElementById("todosd");
        //document.urlParams.getAll('ID') ("todosd");
        todosd.innerHTML = `<div><strong>Nombre del padre, madre o tutor:</strong> ${doc.data().nametutor} ${doc.data().apaternotutor} ${doc.data().amaternotutor}</div>

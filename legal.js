@@ -7,8 +7,10 @@ const myParam = urlParams.get('ID');
 
 //- - - - - - - get data- - - - - - - - - - - - - //
 var get_user = function(email) {
+   const urlParams = new URLSearchParams(window.location.search);
+   const myParam = urlParams.get('ID');
    var db = firebase.firestore();
-   db.collection("messages").where("email", "==", email) 
+   db.collection("messages").where("id", "==", myParam) 
    .get() 
    .then((querySnapshot) => {
    querySnapshot.forEach((doc) => {

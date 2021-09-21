@@ -128,7 +128,7 @@ var push_to_firebase = function(data){
 
 //- - - - - - - - -  update data - - - - - - - - - - - -//
 
-var push_to_firebase = function(data){
+var update_to_firebase = function(data){
         alert("Actualizado exitosamente")
         var db = firebase.firestore();
 
@@ -201,7 +201,7 @@ var push_to_firebase = function(data){
             "mailtutor": mailtutor.value,
            "email": email.value
         }
-        push_to_firebase(data);
+        update_to_firebase(data);
           
 
       }

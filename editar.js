@@ -20,7 +20,7 @@ var get_user = function(email) {
    //console.log(doc.id, " => ", doc.data());  
        var todosd = document.getElementById("todosd");
        //document.urlParams.getAll('ID') ("todosd");
-       todosd.innerHTML = `<div><strong>Nombre del padre, madre o tutor:</strong> ${doc.data().nametutor} ${doc.data().apaternotutor} ${doc.data().amaternotutor}</div>
+       todosd.innerHTML = `
        <div style="padding-top:20px;">
        <div><strong>Menor registrado:</strong></div>
        <div>Nombre del Niño/Niña: ${doc.data().namemenor}</div>

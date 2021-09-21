@@ -82,7 +82,7 @@ var get_user = function(email) {
         .catch(function(error) {
             console.error("Message could not be sent: ", error);
         });
-      })
+      }
 
       var contact_submit = function(){
 

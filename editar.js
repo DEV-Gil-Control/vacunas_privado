@@ -69,7 +69,11 @@ var get_user = function(email) {
   //- - - - - - - - -  update data - - - - - - - - - - - -//
 
 var push_to_firebase = function(data){
+   var get_user = function(email) {
         alert("Actualizado exitosamente")
+   const urlParams = new URLSearchParams(window.location.search);
+   const myParam = urlParams.get('ID');
+   console.log(myParam);
         var db = firebase.firestore();
 
         db.collection("messages").doc("myParam").update({

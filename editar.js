@@ -35,7 +35,7 @@ var get_user = function(email) {
        <div>Apellido materno: ${doc.data().amaternotutor}</div>
        <div>Domicilio: ${doc.data().domicliotutor}</div>
        <div>Colonia: ${doc.data().teltutor}</div>
-       <div>Municpio: ${doc.data().mpiotutor}</div>
+       <div>Municipio: ${doc.data().mpiotutor}</div>
        <div>Tel. casa u oficna: ${doc.data().teltutor}</div>
        <div>Celular: ${doc.data().celtutor}</div>
        <div>Correo Electrónico: ${doc.data().mailtutor}</div>

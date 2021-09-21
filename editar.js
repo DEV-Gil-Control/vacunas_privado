@@ -45,7 +45,7 @@ var get_user = function(email) {
        <div>Red social: ${doc.data().redtutor}</div>
        <div style="padding-top:20px;">
        <button type="button" class="btn btn-dark">Cancelar</button>
-       <button type="button" class="btn btn-warning">Guardar Cambios</button>
+       <button class="btn btn-warning btn-sm" onclick="update_submit();">Guardar</button>
        <button type="button" class="btn btn-danger">FInalizar Edición</button>
        <div>- - - - - - - - - - - - - - - - - - - -  </div>
        <div style="margin-bottom:20px;"></div>`;

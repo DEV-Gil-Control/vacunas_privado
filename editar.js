@@ -58,7 +58,7 @@ var get_user = function(email) {
 
   
 
-    //- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -//
+//- - - - - - - - - - - - - - - - - - - - - - - - - - -//
 
 //- - - - - - - - -  push data - - - - - - - - - - - -//
 
@@ -73,8 +73,10 @@ var push_to_firebase = function(data){
         alert("Actualizado exitosamente")
         var db = firebase.firestore();
 
-        db.collection("messages").doc(myParam).add({
-            namemenor: data["namemenor"],
+        db.collection("messages")
+        .doc(myParam)
+        .update({
+        namemenor: data["namemenor"],
         })
         .then(function(docRef) {
             console.log("Message sent, ID: ", docRef.id);

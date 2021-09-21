@@ -1,7 +1,7 @@
 //- - - - - - - LEER QUERY - - - - - - - - - - //
 var urlParams = new URLSearchParams(window.location.search);
 
-console.log(urlParams.has('ID')); // true
+console.log(urlParams.getAll('ID')); // true
 
 //- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -//
 

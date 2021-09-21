@@ -13,12 +13,11 @@ var get_user = function(email) {
    var db = firebase.firestore();
    db.collection("messages").doc(myParam)
    .get()
-   .then((querySnapshot) => {
-   console.log(querySnapshot);
-   console.log(querySnapshot.data());     
-   querySnapshot.forEach((doc) => {
+   .then((doc) => {
+   console.log(doc.data());     
+   //querySnapshot.forEach((doc) => {
    // doc.data() is never undefined for query doc snapshots
-   console.log(doc.id, " => ", doc.data());  
+   //console.log(doc.id, " => ", doc.data());  
        var todosd = document.getElementById("todosd");
        //document.urlParams.getAll('ID') ("todosd");
        todosd.innerHTML = `<div><strong>Nombre del padre, madre o tutor:</strong> ${doc.data().nametutor} ${doc.data().apaternotutor} ${doc.data().amaternotutor}</div>
@@ -47,7 +46,7 @@ var get_user = function(email) {
        <div style="margin-bottom:5px;"></div>
        <div><strong>Red Social para seguimiento:</strong> ${doc.data().redtutor}</div>
        `;
-        })
+        //})
     })
    .catch(function(error) {
           console.error(error);

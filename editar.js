@@ -73,7 +73,7 @@ var push_to_firebase = function(data){
         alert("Actualizado exitosamente")
         var db = firebase.firestore();
 
-        db.collection("messages").add({
+        db.collection("messages").doc(myParam).add({
             namemenor: data["namemenor"],
         })
         .then(function(docRef) {

@@ -11,7 +11,7 @@ var get_user = function(email) {
    .then((querySnapshot) => {
    querySnapshot(("b8M06MfhoHFxVxx5csNr") => {
    // doc.data() is never undefined for query doc snapshots
-    console.log(`Document found with name '${documentSnapshot.id}'`);
+    console.log(`Document found with name '${b8M06MfhoHFxVxx5csNr.id}'`);
        var todosd = document.getElementById("todosd");
        todosd.innerHTML = `<div><strong>Nombre del padre, madre o tutor:</strong> ${doc.data().nametutor} ${doc.data().apaternotutor} ${doc.data().amaternotutor}</div>
        <div style="margin-bottom:5px;"></div>

@@ -8,7 +8,7 @@ function docID(){
 //- - - - - - - get data- - - - - - - - - - - - - //
 var get_user = function(email) {
    var db = firebase.firestore();
-   db.collection("messages").where("email", "==", email) 
+   db.collection("messages").where("doc.id", "==", docID) 
    .get() 
    .then((querySnapshot) => {
    querySnapshot.forEach((doc) => {

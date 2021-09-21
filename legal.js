@@ -11,7 +11,7 @@ var get_user = function(email) {
    db.collection("messages").where("email", "==", email)
    .get() 
    .then((querySnapshot) => {
-   querySnapshot.where("doc.id", "==", docID) => {
+   querySnapshot.where("doc.id", "==", docID) {
    // doc.data() is never undefined for query doc snapshots
    console.log(doc.id, " => ", doc.data());
        var todosd = document.getElementById("todosd");

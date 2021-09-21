@@ -14,6 +14,7 @@ var get_user = function(email) {
        <div>Tutor registrado: ${doc.data().nametutor} ${doc.data().apaternotutor} ${doc.data().amaternotutor}</div>
        <div>Correo Electrónico: ${doc.data().mailtutor}</div>
        <div style="padding-top:20px;">
+       <input type="button" class="btn btn-outline-dark" value="Ver e imprimir el aviso de privacidad" onclick="window.open('https://private.vacunas.chaledelafuente.mx/legal.html?${doc.id}')" />
        <button class="btn btn-outline-dark" onclick="doclegal">Ver e imprimir el aviso de privacidad</button></div>
        <div style="margin-bottom:20px;"></div>`;
                })
@@ -24,6 +25,7 @@ var get_user = function(email) {
  }  
 //- - - - - - - - -  Query String - - - - - - - - - - - -//
 
+<input type="button" value="button name" onclick="window.open('http://www.website.com/page')" />
 
 //- - - - - - - - - - - - - - - - -  - - - - - - - - - - - -//
 

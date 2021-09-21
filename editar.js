@@ -85,7 +85,7 @@ var push_to_firebase = function(data){
         });
       }
 
-      var update_submit = function(){
+      var contact_submit = function(){
 
         var namemenor = document.getElementById("namemenor");
         

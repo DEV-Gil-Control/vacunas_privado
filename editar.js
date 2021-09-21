@@ -75,10 +75,7 @@ var get_user = function(email) {
         namemenor: data["namemenor"],
         })
    
-        .then(function(docRef) {
-            console.log("Message sent, ID: ", MNoZyL0VfGGQptawt61Z);
-            location.reload();
-        })
+
         .catch(function(error) {
             console.error("Message could not be sent: ", error);
         });

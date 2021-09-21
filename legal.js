@@ -9,6 +9,7 @@ const myParam = urlParams.get('ID');
 var get_user = function(email) {
    const urlParams = new URLSearchParams(window.location.search);
    const myParam = urlParams.get('ID');
+   console.log(myParam);
    var db = firebase.firestore();
    db.collection("messages").where("id", "==", myParam) 
    .get() 

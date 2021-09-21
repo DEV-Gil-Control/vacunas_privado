@@ -33,7 +33,7 @@ var get_user = function(email) {
        <div>Nombre: ${doc.data().nametutor}</div>
        <div>Apellido paterno: ${doc.data().apaternotutor}</div>
        <div>Apellido materno: ${doc.data().amaternotutor}</div>
-       <div>Domicilio: ${doc.data().domicliotutor}</div>
+       <div>Domicilio: ${doc.data().domiciliotutor}</div>
        <div>Colonia: ${doc.data().teltutor}</div>
        <div>Municipio: ${doc.data().mpiotutor}</div>
        <div>Tel. casa u oficna: ${doc.data().teltutor}</div>

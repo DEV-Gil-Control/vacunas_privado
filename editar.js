@@ -143,7 +143,7 @@ var push_to_firebase = function(data){
       
   //- - - - - - - - -  update data - - - - - - - - - - - -//
 
-var update_to_firebase = function(data){
+var push_to_firebase = function(data){
         alert("Actualizado exitosamente")
         var db = firebase.firestore();
 

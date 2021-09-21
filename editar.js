@@ -147,7 +147,7 @@ var update_to_firebase = function(data){
         alert("Actualizado exitosamente")
         var db = firebase.firestore();
 
-        db.collection("messages").update({
+        db.collection("messages").add({
             namemenor: data["namemenor"],
         })
         .then(function(docRef) {

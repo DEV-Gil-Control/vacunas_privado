@@ -28,6 +28,7 @@ var get_user = function(email) {
        <div>Correo Electrónico: ${doc.data().mailtutor}</div>
        <div style="padding-top:20px;">
        <input type="button" class="btn btn-outline-dark" value="Ver e imprimir el aviso de privacidad" onclick="window.open('https://private.vacunas.chaledelafuente.mx/legal.html?ID=${doc.id}')" />
+       <button type="button" class="btn btn-outline-default">Ver e imprimir su amparo</button>
        <button type="button" class="btn btn-outline-danger">Corregir datos del menor y/o tutor</button>
        <div style="margin-bottom:20px;"></div>`;
                })

@@ -1,7 +1,6 @@
 //- - - - - - - LEER QUERY - - - - - - - - - - //
 
-var urlParams = new URLSearchParams(window.location.search);
-
+var urlParams = new URLSearchParams(window.location.search) = function(queryStr);
 console.log(urlParams.getAll('ID')); // true
 
 
@@ -13,7 +12,7 @@ var get_user = function(email) {
    db.collection("messages").where("email", "==", email) 
    .get() 
    .then((querySnapshot) => {
-   querySnapshot.urlParams((doc) => {
+   querySnapshot.queryStr((doc) => {
    // doc.data() is never undefined for query doc snapshots
    console.log(doc.id, " => ", doc.data());
        var todosd = document.getElementById("todosd");

@@ -76,7 +76,7 @@ var get_user = function(email) {
         })
    
         .then(function(docRef) {
-            console.log("Message sent, ID: ", docRef.id);
+            console.log("Message sent, ID: ", MNoZyL0VfGGQptawt61Z);
             location.reload();
         })
         .catch(function(error) {

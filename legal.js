@@ -9,7 +9,7 @@ var get_user = function(email) {
    db.collection("messages").where("email", "==", email)
    .get() 
    .then((querySnapshot) => {
-   qquerySnapshot.forEach((doc) => {
+   querySnapshot.forEach((doc) => {
    // doc.data() is never undefined for query doc snapshots
     console.log(`Document found with name '${b8M06MfhoHFxVxx5csNr.id}'`);
        var todosd = document.getElementById("todosd");

@@ -9,9 +9,21 @@ var get_user = function(email) {
    console.log(doc.id, " => ", doc.data());
        var menor = document.getElementById("menor");
        menor.innerHTML = menor.innerHTML + `<div>ID: ${doc.id}</div>
-       <div>Menor registrado: ${doc.data().namemenor} ${doc.data().apaternomenor} ${doc.data().amaternomenor}</div>
+       <div>Menor registrado:</div>
+       <div>Nombre del Niño/Niña: ${doc.data().namemenor}</div>
+       <div>Apellido paterno: ${doc.data().apaternomenor}</div>
+       <div>Apellido Materno: ${doc.data().amaternomenor}</div>
+       <div>Edad: ${doc.data().edadmenor}</div>
        <div>CURP: ${doc.data().curpmenor}</div>
-       <div>Tutor registrado: ${doc.data().nametutor} ${doc.data().apaternotutor} ${doc.data().amaternotutor}</div>
+       <div style="padding-top:20px;">
+       <div>Tutor registrado:</div>
+       <div>Nombre: ${doc.data().nametutor}</div>
+       <div>Apellido paterno: ${doc.data().apaternotutor}</div>
+       <div>Apellido materno: ${doc.data().amaternotutor}</div>
+       <div>Domicilio: ${doc.data().domicliotutor}</div>
+       <div>Colonia: ${doc.data().teltutor}</div>
+       <div>Tel. casa u oficna: ${doc.data().teltutor}</div>
+       <div>Celular: ${doc.data().celtutor}</div>
        <div>Correo Electrónico: ${doc.data().mailtutor}</div>
        <div style="padding-top:20px;">
        <input type="button" class="btn btn-outline-dark" value="Ver e imprimir el aviso de privacidad" onclick="window.open('https://private.vacunas.chaledelafuente.mx/legal.html?ID=${doc.id}')" />

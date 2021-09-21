@@ -35,9 +35,11 @@ var get_user = function(email) {
        <div>Apellido materno: ${doc.data().amaternotutor}</div>
        <div>Domicilio: ${doc.data().domicliotutor}</div>
        <div>Colonia: ${doc.data().teltutor}</div>
+       <div>Municpio: ${doc.data().mpiotutor}</div>
        <div>Tel. casa u oficna: ${doc.data().teltutor}</div>
        <div>Celular: ${doc.data().celtutor}</div>
        <div>Correo Electrónico: ${doc.data().mailtutor}</div>
+       <div>Red social: ${doc.data().redtutor}</div>
        <div style="padding-top:20px;">
        <button type="button" class="btn btn-outline-primary">Ver e imprimir su amparo</button>
        <div>- - - - - - - - - - - - - - - - - - - -  </div>

@@ -66,26 +66,14 @@ var get_user = function(email) {
 //- - - - - - - - - - - - - - - - - - - - - - - - - -//
       
       
-  //- - - - - - - - -  update data - - - - - - - - - - - -//
-
-
-   var get_user = function(email) {
-   const urlParams = new URLSearchParams(window.location.search);
-   const myParam = urlParams.get('ID');
-   console.log(myParam);
-   var db = firebase.firestore();
-   db.collection("messages").doc(myParam)
-   .get()
-   .then((doc) => {
-   console.log(doc.data());     
+  //- - - - - - - - -  update data - - - - - - - - - - - -//  
  
       var push_to_firebase = function(data){
       var db = firebase.firestore();
 
-        db.collection("messages").doc("myParam").update({
+        db.collection("messages").doc("MNoZyL0VfGGQptawt61Z").update({
         namemenor: data["namemenor"],
         })
-      
    
         .then(function(docRef) {
             console.log("Message sent, ID: ", docRef.id);

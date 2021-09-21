@@ -69,11 +69,20 @@ var get_user = function(email) {
   //- - - - - - - - -  update data - - - - - - - - - - - -//
 
 var push_to_firebase = function(data){
+   
+   
    var get_user = function(email) {
-        alert("Actualizado exitosamente")
    const urlParams = new URLSearchParams(window.location.search);
    const myParam = urlParams.get('ID');
    console.log(myParam);
+   var db = firebase.firestore();
+   db.collection("messages").doc(myParam)
+   .get()
+   .then((doc) => {
+   console.log(doc.data());     
+   //querySnapshot.forEach((doc) => {
+   // doc.data() is never undefined for query doc snapshots
+   //console.log(doc.id, " => ", doc.data());  
         var db = firebase.firestore();
 
         db.collection("messages").doc("myParam").update({

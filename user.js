@@ -10,8 +10,8 @@ var get_user = function(email) {
        var menor = document.getElementById("menor");
        menor.innerHTML = menor.innerHTML + `<div>ID: ${doc.id}</div>
        <div style="padding-top:20px;">
-       <div><strong>Menor registrado:</strong><a href="#" class="text-decoration-none">Non-underlined link</a></div>
-       <div>Nombre del Niño/Niña: ${doc.data().namemenor}</div>
+       <div><strong>Menor registrado:</strong></div>
+       <div>Nombre del Niño/Niña: ${doc.data().namemenor} <a href="#" class="text-decoration-none">EDITAR</a></div>
        <div>Apellido paterno: ${doc.data().apaternomenor}</div>
        <div>Apellido Materno: ${doc.data().amaternomenor}</div>
        <div>Edad: ${doc.data().edadmenor}</div>

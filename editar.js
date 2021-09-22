@@ -313,6 +313,31 @@ var get_user = function(email) {
        push_to_firebasek(data);
       };
 
+ //- - - - - - - - -  colonia tutor - - - - - - - - - - - -//  
+
+  var push_to_firebasek = function(data){
+      var db = firebase.firestore();
+
+        db.collection("messages").doc(urlParams.get('ID')).update({
+        coloniatutor: data["coloniatutor"], 
+        })
+   
+       .then(function(docRef) {
+            location.reload();
+        })
+        .catch(function(error) {
+            console.error("Message could not be sent: ", error);
+        });
+      }
+      var coloniatutor_submit = function(){
+      var coloniatutor = document.getElementById("coloniatutor");
+        
+      var data = {
+          "coloniatutor": coloniatutor.value,
+        }
+       push_to_firebasek(data);
+      };
+
  //- - - - - - - - -  cp tutor - - - - - - - - - - - -//  
   var push_to_firebasel = function(data){
       var db = firebase.firestore();

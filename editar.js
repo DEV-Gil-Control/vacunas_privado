@@ -388,7 +388,7 @@ var get_user = function(email) {
       };
 
  //- - - - - - - - -  cel tutor - - - - - - - - - - - -//  
-  var push_to_firebaseo = function(data){
+  var push_to_firebasex = function(data){
       var db = firebase.firestore();
 
         db.collection("messages").doc(urlParams.get('ID')).update({
@@ -408,7 +408,7 @@ var get_user = function(email) {
       var data = {
           "celtutor": celtutor.value,
         }
-       push_to_firebaseo(data);
+       push_to_firebasex(data);
       };
 
  //- - - - - - - - -  mail tutor - - - - - - - - - - - -//  

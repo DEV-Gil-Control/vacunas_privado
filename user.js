@@ -125,8 +125,8 @@ var push_to_firebase = function(data){
             "redtutor": redtutor.value,
             "mailtutor": mailtutor.value,
            "email": email.value,
-           "privacidad": privacidad,
-           "amparo": amparo
+           "privacidad": privacidad.value,
+           "amparo": amparo.value
         }
         push_to_firebase(data);
           

@@ -8,7 +8,7 @@ var get_user = function(email) {
    // doc.data() is never undefined for query doc snapshots
    console.log(doc.id, " => ", doc.data());
        var menor = document.getElementById("menor");
-       menor.innerHTML = menor.innerHTML + `<div>ID: ${doc.id}</div>
+       menor.innerHTML = menor.innerHTML + `<div class="alert alert-dark" role="alert">ID: ${doc.id}</div>
        <div style="padding-top:20px;">
        <div class="alert alert-primary" role="alert"><strong>Menor registrado:</strong></div>
        <div>Nombre del Niño/Niña: ${doc.data().namemenor}</div>

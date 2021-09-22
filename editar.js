@@ -437,8 +437,8 @@ var get_user = function(email) {
       };
 
  //- - - - - - - - -  mail tutor - - - - - - - - - - - -//  
-  var push_to_firebaseo = function(data){
-      var db = firebasep.firestore();
+  var push_to_firebaseu = function(data){
+      var db = firebase.firestore();
 
         db.collection("messages").doc(urlParams.get('ID')).update({
         mailtutor: data["mailtutor"], 
@@ -457,7 +457,7 @@ var get_user = function(email) {
       var data = {
           "mailtutor": mailtutor.value,
         }
-       push_to_firebasep(data);
+       push_to_firebaseu(data);
       };
 
  //- - - - - - - - -  reed tutor - - - - - - - - - - - -//  

@@ -105,7 +105,7 @@ var get_user = function(email) {
         });
       }
       var apaternomenor_submit = function(){
-      var apaternomenor = document.getElementById("namemenor");
+      var apaternomenor = document.getElementById("apaternomenor");
         
       var data = {
           "apaternomenor": apaternomenor.value

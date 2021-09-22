@@ -80,7 +80,8 @@ var get_user = function(email) {
        <input type="text" id="redtutor" name="redtutor" placeholder="NUEVA Red Social de Contacto" style="width: 30%; margin-left:10px;">
        <button class="btn btn btn-link btn-sm" onclick="redtutor_submit();">Cambiar</button></div>
        <div style="padding-top:20px;">
-       <button type="button" class="btn btn-danger">Cerrar Editor y Regresar</button>
+       <input type="button" class="btn btn-danger" value="Salir del Editor y Regresar" onclick="window.location('user.html')"/>
+       
        <div>- - - - - - - - - - - - - - - - - - - -  </div>
        <div style="margin-bottom:20px;"></div>`;
         //})

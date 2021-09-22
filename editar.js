@@ -427,7 +427,7 @@ var get_user = function(email) {
             console.error("Message could not be sent: ", error);
         });
       }
-      var nametutor_submit = function(){
+      var celtutor_submit = function(){
       var celtutor = document.getElementById("celtutor");
         
       var data = {

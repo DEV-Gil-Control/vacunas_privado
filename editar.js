@@ -88,7 +88,7 @@ var get_user = function(email) {
           "namemenor": namemenor.value
         }
        push_to_firebase(data);
-      });
+      };
   //- - - - - - - - -  update apellido paterno menor - - - - - - - - - - - -//  
  
       var push_to_firebase = function(data){

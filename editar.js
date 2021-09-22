@@ -95,9 +95,8 @@ var get_user = function(email) {
        <div><strong>Estatus del Aviso del Amparo:</strong> ${doc.data().amparo}
        <input type="text" id="amparo" name="redtutor" placeholder="Escriba un comentario" style="width: 30%; margin-left:10px;">
        <button class="btn btn btn-link btn-sm" onclick="amparo_submit();">Cambiar</button></div>
-       <div style="padding-top:20px;">
+       <div style="padding-top:60px;">
        <input type="button" class="btn btn-danger" value="Salir del Editor y Regresar" onclick="window.location.replace('user.html')"/>
-       <div>- - - - - - - - - - - - - - - - - - - -  </div>
        <div style="margin-bottom:20px;"></div>`;
         //})
     })

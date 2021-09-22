@@ -32,7 +32,7 @@ var get_user = function(email) {
        <input type="button" class="btn btn-info" value="Editar o Cambiar Campos" onclick="window.location.replace('https://private.vacunas.chaledelafuente.mx/editar.html?ID=${doc.id}')" />
        <input type="button" class="btn btn-dark" value="Ver e imprimir el aviso de privacidad" onclick="window.open('https://private.vacunas.chaledelafuente.mx/legal.html?ID=${doc.id}')" />
        <button type="button" class="btn btn-success">Ver e imprimir su amparo</button>
-       <div>- - - - - - - - - - - - - - - - - - - -  </div>
+       <div class="alert alert-secondary" role="alert" style="margin-bottom:10px;">-  </div>
        <div style="margin-bottom:20px;"></div>`;
                })
     })

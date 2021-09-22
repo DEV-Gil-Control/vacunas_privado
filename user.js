@@ -23,14 +23,16 @@ var get_user = function(email) {
        <div>Apellido materno: ${doc.data().amaternotutor}</div>
        <div>Domicilio: ${doc.data().domiciliotutor}</div>
        <div>Colonia: ${doc.data().teltutor}</div>
+       <div>Código Postal: ${doc.data().cptutor}</div>
        <div>Municipio: ${doc.data().mpiotutor}</div>
        <div>Tel. casa u oficna: ${doc.data().teltutor}</div>
        <div>Celular: ${doc.data().celtutor}</div>
        <div>Correo Electrónico: ${doc.data().mailtutor}</div>
        <div>Red social: ${doc.data().redtutor}</div>
        <div style="padding-top:20px;">
-       <input type="button" class="btn btn-outline-dark" value="Ver e imprimir el aviso de privacidad" onclick="window.open('https://private.vacunas.chaledelafuente.mx/legal.html?ID=${doc.id}')" />
-       <button type="button" class="btn btn-outline-primary">Ver e imprimir su amparo</button>
+       <input type="button" class="btn btn-danger" value="Editar o Cambiar Campos" onclick="window.open('https://private.vacunas.chaledelafuente.mx/editar.html?ID=${doc.id}')" />
+       <input type="button" class="btn btn-dark" value="Ver e imprimir el aviso de privacidad" onclick="window.open('https://private.vacunas.chaledelafuente.mx/legal.html?ID=${doc.id}')" />
+       <button type="button" class="btn btn-primary">Ver e imprimir su amparo</button>
        <div>- - - - - - - - - - - - - - - - - - - -  </div>
        <div style="margin-bottom:20px;"></div>`;
                })

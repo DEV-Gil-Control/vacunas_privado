@@ -25,6 +25,7 @@ var get_user = function(email) {
        <div>Nombre del Niño/Niña: ${doc.data().namemenor}
           <label for="namemenor"></label>
           <input type="text" id="namemenor" name="namemenor" placeholder="NUEVO Nombre de Niño/Niña" style="width: 30%; margin-left:10px;">
+          <button class="btn btn-warning btn-sm" onclick="nombremenor_submit();">Guardar</button>
           </div>
        <div>Apellido paterno: ${doc.data().apaternomenor}</div>
           <label for="apaternomenor"></label>
@@ -47,7 +48,6 @@ var get_user = function(email) {
        <div>Red social: ${doc.data().redtutor}</div>
        <div style="padding-top:20px;">
        <button type="button" class="btn btn-dark">Cancelar</button>
-       <button class="btn btn-warning btn-sm" onclick="contact_submit();">Guardar</button>
        <button type="button" class="btn btn-danger">FInalizar Edición</button>
        <div>- - - - - - - - - - - - - - - - - - - -  </div>
        <div style="margin-bottom:20px;"></div>`;
@@ -69,14 +69,13 @@ var get_user = function(email) {
 //- - - - - - - - - - - - - - - - - - - - - - - - - -//
       
       
-  //- - - - - - - - -  update data - - - - - - - - - - - -//  
+  //- - - - - - - - -  update name - - - - - - - - - - - -//  
  
       var push_to_firebase = function(data){
       var db = firebase.firestore();
 
         db.collection("messages").doc(urlParams.get('ID')).update({
-        namemenor: data["namemenor"],
-        apaternomenor: data["apaternomenor"],   
+        namemenor: data["namemenor"], 
         })
    
        .then(function(docRef) {
@@ -87,15 +86,13 @@ var get_user = function(email) {
         });
       }
 
-      var contact_submit = function(){
+      var nombremenor_submit = function(){
 
         var namemenor = document.getElementById("namemenor");
-        var apaternomenor = document.getElementById("apaternomenor"); 
         
         var data = {
 
-          "namemenor": namemenor.value,
-          "apaternomenor": apaternomenor.value 
+          "namemenor": namemenor.value
         }
        push_to_firebase(data);
           

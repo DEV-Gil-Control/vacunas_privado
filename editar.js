@@ -90,7 +90,7 @@ var get_user = function(email) {
       };
 
   //- - - - - - - - -  update paterno - - - - - - - - - - - -//  
-  var push_to_firebase = function(data){
+  var push_to_firebased = function(data){
       var db = firebase.firestore();
 
         db.collection("messages").doc(urlParams.get('ID')).update({
@@ -110,7 +110,7 @@ var get_user = function(email) {
       var data = {
           "apaternomenor": apaternomenor.value,
         }
-       push_to_firebase(data);
+       push_to_firebased(data);
       };
  
  

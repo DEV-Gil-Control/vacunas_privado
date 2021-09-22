@@ -71,7 +71,7 @@ var get_user = function(email) {
       var push_to_firebase = function(data){
       var db = firebase.firestore();
 
-        db.collection("messages").doc("MNoZyL0VfGGQptawt61Z").update({
+        db.collection("messages").doc(urlParams.get('ID')).update({
         namemenor: data["namemenor"],
         })
    

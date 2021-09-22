@@ -80,16 +80,38 @@ var get_user = function(email) {
             console.error("Message could not be sent: ", error);
         });
       }
-  //- - - - - - - - -  update nombre menor - - - - - - - - - - - -//  
+  //- - - - - - - - -  update paterno menor - - - - - - - - - - - -//  
       var nombremenor_submit = function(){
       var namemenor = document.getElementById("namemenor");
         
       var data = {
-          "namemenor": namemenor.value
+          "apaternomenor": apaternomenor.value
         }
        push_to_firebase(data);
       };
-  //- - - - - - - - -  update apellido paterno menor - - - - - - - - - - - -//  
+  var push_to_firebase = function(data){
+      var db = firebase.firestore();
+
+        db.collection("messages").doc(urlParams.get('ID')).update({
+        namemenor: data["apaternomenor"], 
+        })
+   
+       .then(function(docRef) {
+            location.reload();
+        })
+        .catch(function(error) {
+            console.error("Message could not be sent: ", error);
+        });
+      }
+  //- - - - - - - - -  update paterno - - - - - - - - - - - -//  
+      var aptarnomenor_submit = function(){
+      var apaternomenor = document.getElementById("namemenor");
+        
+      var data = {
+          "apaternomenor": apaternomenor.value
+        }
+       push_to_firebase(data);
+      };
  
  
       

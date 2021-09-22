@@ -21,13 +21,13 @@ var get_user = function(email) {
        var todosd = document.getElementById("todosd");
        todosd.innerHTML = `
        <div style="padding-top:20px;">
-       <div><strong>Menor registrado:</strong></div>
+       <div class="alert alert-primary"><strong>Menor registrado:</strong></div>
        <div><strong>Nombre del Niño/Niña:</strong> ${doc.data().namemenor}
           <label for="namemenor"></label>
           <input type="text" id="namemenor" name="namemenor" placeholder="NUEVO Nombre de Niño/Niña" style="width: 30%; margin-left:10px;">
           <button class="btn btn btn-link btn-sm" onclick="namemenor_submit();">Cambiar</button>
           </div>
-       <div><strong>Apellido paterno:</strong> ${doc.data().apaternomenor}
+          <div><strong>Apellido paterno:</strong> ${doc.data().apaternomenor}
           <label for="apaternomenor"></label>
           <input type="text" id="apaternomenor" name="apaternomenor" placeholder="NUEVO Apellido Paterno" style="width: 30%; margin-left:10px;">
           <button class="btn btn btn-link btn-sm" onclick="apaternomenor_submit();">Cambiar</button>
@@ -53,7 +53,7 @@ var get_user = function(email) {
        <button class="btn btn btn-link btn-sm" onclick="estadomenor_submit();">Cambiar</button>
        </div>
        <div style="padding-top:20px;">
-       <div><strong>Tutor registrado:</strong></div>
+       <div class="alert alert-primary"><strong>Tutor registrado:</strong></div>
        <div><strong>Nombre:</strong> ${doc.data().nametutor}
        <input type="text" id="nametutor" name="nametutor" placeholder="NUEVO Nombre de Tutor" style="width: 30%; margin-left:10px;">
        <button class="btn btn btn-link btn-sm" onclick="nametutor_submit();">Cambiar</button></div>
@@ -88,7 +88,7 @@ var get_user = function(email) {
        <input type="text" id="redtutor" name="redtutor" placeholder="NUEVA Red Social de Contacto" style="width: 30%; margin-left:10px;">
        <button class="btn btn btn-link btn-sm" onclick="redtutor_submit();">Cambiar</button></div>
        <div style="padding-top:20px;">
-       <div><strong>Estatus:</strong></div>
+       <div class="alert alert-warning"><strong>Estatus:</strong></div>
        <div><strong>Estatus del Aviso de Privacidad:</strong> ${doc.data().privacidad}
        <input type="text" id="privacidad" name="privacidad" placeholder="Escriba un comentario" style="width: 30%; margin-left:10px;">
        <button class="btn btn btn-link btn-sm" onclick="privacidad_submit();">Cambiar</button></div>

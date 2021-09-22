@@ -461,8 +461,8 @@ var get_user = function(email) {
       };
 
  //- - - - - - - - -  reed tutor - - - - - - - - - - - -//  
-  var push_to_firebaseq = function(data){
-      var db = firebaseq.firestore();
+var push_to_firebaserr = function(data){
+      var db = firebase.firestore();
 
         db.collection("messages").doc(urlParams.get('ID')).update({
         redtutor: data["redtutor"], 
@@ -481,9 +481,8 @@ var get_user = function(email) {
       var data = {
           "redtutor": redtutor.value,
         }
-       push_to_firebaseq(data);
+       push_to_firebaserr(data);
       };
-
 
 
 

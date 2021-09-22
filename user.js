@@ -32,7 +32,7 @@ var get_user = function(email) {
        <div class="alert alert-primary" role="alert"><strong>Estatus:</strong></div>
        <div>Aviso de Privacidad Impreso: ${doc.data().redtutor}</div>
        <div>Amparo Impreso: ${doc.data().redtutor}</div>
-       <div style="padding-bottom:20px; text-align:right;">
+       <div style="padding-bottom:20px; padding-top:20px; text-align:right;">
        <input type="button" class="btn btn-info" value="Editar o Cambiar Campos" onclick="window.location.replace('https://private.vacunas.chaledelafuente.mx/editar.html?ID=${doc.id}')" />
        <input type="button" class="btn btn-dark" value="Ver e imprimir el aviso de privacidad" onclick="window.open('https://private.vacunas.chaledelafuente.mx/legal.html?ID=${doc.id}')" />
        <button type="button" class="btn btn-success">Ver e imprimir su amparo</button>

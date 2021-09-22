@@ -9,8 +9,7 @@ var get_user = function(email) {
    console.log(doc.id, " => ", doc.data());
        var menor = document.getElementById("menor");
        menor.innerHTML = menor.innerHTML + `<div class="alert alert-dark" role="alert"><strong>CURP:</strong> ${doc.data().curpmenor}</div>
-       <div style="padding-top:-20px;">
-       <div class="alert alert-primary" role="alert"><strong>Menor registrado:</strong></div>
+       <div class="alert alert-primary" role="alert" style="padding-top:-20px;"><strong>Menor registrado:</strong></div>
        <div>Nombre del Niño/Niña: ${doc.data().namemenor}</div>
        <div>Apellido paterno: ${doc.data().apaternomenor}</div>
        <div>Apellido Materno: ${doc.data().amaternomenor}</div>

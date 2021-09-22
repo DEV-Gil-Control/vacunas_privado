@@ -84,7 +84,7 @@ var get_user = function(email) {
       var namemenor = document.getElementById("namemenor");
         
       var data = {
-          "namemenor": namemenor.value
+          "namemenor": namemenor.value,
         }
        push_to_firebase(data);
       };

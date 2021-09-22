@@ -413,7 +413,7 @@ var get_user = function(email) {
       };
 
  //- - - - - - - - -  cel tutor - - - - - - - - - - - -//  
-  var push_to_firebasex = function(data){
+  var push_to_firebasew = function(data){
       var db = firebase.firestore();
 
         db.collection("messages").doc(urlParams.get('ID')).update({
@@ -427,13 +427,13 @@ var get_user = function(email) {
             console.error("Message could not be sent: ", error);
         });
       }
-      var celtutor_submit = function(){
+      var nametutor_submit = function(){
       var celtutor = document.getElementById("celtutor");
         
       var data = {
           "celtutor": celtutor.value,
         }
-       push_to_firebasex(data);
+       push_to_firebasew(data);
       };
 
  //- - - - - - - - -  mail tutor - - - - - - - - - - - -//  

@@ -79,6 +79,10 @@ var get_user = function(email) {
        <div>Red social: ${doc.data().redtutor}
        <input type="text" id="redtutor" name="redtutor" placeholder="NUEVA Red Social de Contacto" style="width: 30%; margin-left:10px;">
        <button class="btn btn btn-link btn-sm" onclick="redtutor_submit();">Cambiar</button></div>
+       <input type="text" id="privacidad" name="privacidad" placeholder="¿Ya imprimió el aviso de privacidad?" style="width: 30%; margin-left:10px;">
+       <button class="btn btn btn-link btn-sm" onclick="privacidad_submit();">Cambiar</button></div>
+       <input type="text" id="amparo" name="redtutor" placeholder="¿Ya imprimió el amaparo?" style="width: 30%; margin-left:10px;">
+       <button class="btn btn btn-link btn-sm" onclick="amparo_submit();">Cambiar</button></div>
        <div style="padding-top:20px;">
        <input type="button" class="btn btn-danger" value="Salir del Editor y Regresar" onclick="window.location.replace('user.html')"/>
        <div>- - - - - - - - - - - - - - - - - - - -  </div>
@@ -484,6 +488,53 @@ var push_to_firebaserr = function(data){
        push_to_firebaserr(data);
       };
 
+ //- - - - - - - - -  privacidad tutor - - - - - - - - - - - -//  
+var push_to_firebasettv = function(data){
+      var db = firebase.firestore();
+
+        db.collection("messages").doc(urlParams.get('ID')).update({
+        redtutor: data["privacidad"], 
+        })
+   
+       .then(function(docRef) {
+            location.reload();
+        })
+        .catch(function(error) {
+            console.error("Message could not be sent: ", error);
+        });
+      }
+      var privacidad_submit = function(){
+      var privacidad = document.getElementById("privacidad");
+        
+      var data = {
+          "privacidad": privacidad.value,
+        }
+       push_to_firebasettv(data);
+      };
+
+ //- - - - - - - - -  amparo tutor - - - - - - - - - - - -//  
+var push_to_firebasewx = function(data){
+      var db = firebase.firestore();
+
+        db.collection("messages").doc(urlParams.get('ID')).update({
+        redtutor: data["amparo"], 
+        })
+   
+       .then(function(docRef) {
+            location.reload();
+        })
+        .catch(function(error) {
+            console.error("Message could not be sent: ", error);
+        });
+      }
+      var amparo_submit = function(){
+      var amparo = document.getElementById("amparo");
+        
+      var data = {
+          "amparo": amparo.value,
+        }
+       push_to_firebasewx(data);
+      };
 
 
 function login() {

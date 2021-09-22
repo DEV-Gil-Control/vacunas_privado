@@ -62,12 +62,6 @@ var get_user = function(email) {
   
 
 //- - - - - - - - - - - - - - - - - - - - - - - - - - -//
-
-//- - - - - - - - -  push data - - - - - - - - - - - -//
-
-
-
-//- - - - - - - - - - - - - - - - - - - - - - - - - -//
       
       
   //- - - - - - - - -  update name - - - - - - - - - - - -//  
@@ -88,18 +82,14 @@ var get_user = function(email) {
       }
 
       var nombremenor_submit = function(){
-
-        var namemenor = document.getElementById("namemenor");
+      var namemenor = document.getElementById("namemenor");
         
-        var data = {
-
+      var data = {
           "namemenor": namemenor.value
         }
        push_to_firebase(data);
-          
-
       }
-      
+      });
   //- - - - - - - - -  update apellido paterno menor - - - - - - - - - - - -//  
  
       var push_to_firebase = function(data){
@@ -124,10 +114,8 @@ var get_user = function(email) {
           "apaternomenor": apaternomenor.value 
         }
        push_to_firebase(data);
-          
-
       }
-      
+      });
     //  document.getElementById("submit_msg").addEventListener("click", contact_submit);    
       
 

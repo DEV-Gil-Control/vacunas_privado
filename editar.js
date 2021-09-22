@@ -70,7 +70,8 @@ var get_user = function(email) {
       var db = firebase.firestore();
 
         db.collection("messages").doc(urlParams.get('ID')).update({
-        namemenor: data["namemenor"], 
+        namemenor: data["namemenor"],
+        apaternomenor: data["apaternomenor"],   
         })
    
        .then(function(docRef) {
@@ -80,7 +81,7 @@ var get_user = function(email) {
             console.error("Message could not be sent: ", error);
         });
       }
-
+  //- - - - - - - - -  update apellido paterno menor - - - - - - - - - - - -//  
       var nombremenor_submit = function(){
       var namemenor = document.getElementById("namemenor");
         

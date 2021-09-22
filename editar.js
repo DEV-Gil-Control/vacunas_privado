@@ -80,7 +80,6 @@ var get_user = function(email) {
             console.error("Message could not be sent: ", error);
         });
       }
-  //- - - - - - - - -  update paterno menor - - - - - - - - - - - -//  
       var nombremenor_submit = function(){
       var namemenor = document.getElementById("namemenor");
         
@@ -89,6 +88,8 @@ var get_user = function(email) {
         }
        push_to_firebase(data);
       };
+
+  //- - - - - - - - -  update paterno - - - - - - - - - - - -//  
   var push_to_firebase = function(data){
       var db = firebase.firestore();
 
@@ -103,8 +104,7 @@ var get_user = function(email) {
             console.error("Message could not be sent: ", error);
         });
       }
-  //- - - - - - - - -  update paterno - - - - - - - - - - - -//  
-      var aptarnomenor_submit = function(){
+      var apaternomenor_submit = function(){
       var apaternomenor = document.getElementById("namemenor");
         
       var data = {

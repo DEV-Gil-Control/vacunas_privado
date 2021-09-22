@@ -91,21 +91,6 @@ var get_user = function(email) {
       };
   //- - - - - - - - -  update apellido paterno menor - - - - - - - - - - - -//  
  
-      var push_to_firebase = function(data){
-      var db = firebase.firestore();
-
-        db.collection("messages").doc(urlParams.get('ID')).update({
-        apaternomenor: data["apaternomenor"],   
-        })
-   
-       .then(function(docRef) {
-            location.reload();
-        })
-        .catch(function(error) {
-            console.error("Message could not be sent: ", error);
-        });
-      }
-
       var apaternomenor_submit = function(){
         var apaternomenor = document.getElementById("apaternomenor"); 
         

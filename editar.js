@@ -30,6 +30,7 @@ var get_user = function(email) {
        <div>Apellido paterno: ${doc.data().apaternomenor}</div>
           <label for="apaternomenor"></label>
           <input type="text" id="apaternomenor" name="apaternomenor" placeholder="NUEVO Apellido Paterno" style="width: 30%;">
+          <button class="btn btn-warning btn-sm" onclick="apaternomenor_submit();">Guardar</button>
           </div>
        <div>Apellido Materno: ${doc.data().amaternomenor}</div>
        <div>Edad: ${doc.data().edadmenor}</div>
@@ -93,6 +94,34 @@ var get_user = function(email) {
         var data = {
 
           "namemenor": namemenor.value
+        }
+       push_to_firebase(data);
+          
+
+      }
+      
+  //- - - - - - - - -  update apellido paterno menor - - - - - - - - - - - -//  
+ 
+      var push_to_firebase = function(data){
+      var db = firebase.firestore();
+
+        db.collection("messages").doc(urlParams.get('ID')).update({
+        apaternomenor: data["apaternomenor"],   
+        })
+   
+       .then(function(docRef) {
+            location.reload();
+        })
+        .catch(function(error) {
+            console.error("Message could not be sent: ", error);
+        });
+      }
+
+      var apaternomenor_submit = function(){
+        var apaternomenor = document.getElementById("apaternomenor"); 
+        
+        var data = {
+          "apaternomenor": apaternomenor.value 
         }
        push_to_firebase(data);
           

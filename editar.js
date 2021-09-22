@@ -24,11 +24,11 @@ var get_user = function(email) {
        <div><strong>Menor registrado:</strong></div>
        <div>Nombre del Niño/Niña: ${doc.data().namemenor}
           <label for="namemenor"></label>
-          <input type="text" id="namemenor" name="namemenor" placeholder="NUEVO Nombre de Niño/Niña" style="width: 50%; margin-left:10px;">
+          <input type="text" id="namemenor" name="namemenor" placeholder="NUEVO Nombre de Niño/Niña" style="width: 30%; margin-left:10px;">
           </div>
        <div>Apellido paterno: ${doc.data().apaternomenor}</div>
           <label for="apaternomenor"></label>
-          <input type="text" id="apaternomenor" name="apaternomenor" placeholder="NUEVO Apellido Paterno" style="width: 50%; margin-left:10px;">
+          <input type="text" id="apaternomenor" name="apaternomenor" placeholder="NUEVO Apellido Paterno" style="width: 30%; margin-left:10px;">
           </div>
        <div>Apellido Materno: ${doc.data().amaternomenor}</div>
        <div>Edad: ${doc.data().edadmenor}</div>

@@ -98,7 +98,7 @@ var get_user = function(email) {
        <div style="padding-top:60px;">
        <div style="text-align:right;">
        <input type="button" class="btn btn-danger" value="Salir del Editor y Regresar" onclick="window.location.replace('user.html')"/>
-       </div>`
+       </div>
        <div style="margin-bottom:20px;"></div>`;
         //})
     })

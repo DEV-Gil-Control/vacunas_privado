@@ -22,77 +22,77 @@ var get_user = function(email) {
        todosd.innerHTML = `
        <div style="padding-top:20px;">
        <div><strong>Menor registrado:</strong></div>
-       <div>Nombre del Niño/Niña: ${doc.data().namemenor}
+       <div><strong>Nombre del Niño/Niña:</strong> ${doc.data().namemenor}
           <label for="namemenor"></label>
           <input type="text" id="namemenor" name="namemenor" placeholder="NUEVO Nombre de Niño/Niña" style="width: 30%; margin-left:10px;">
           <button class="btn btn btn-link btn-sm" onclick="namemenor_submit();">Cambiar</button>
           </div>
-       <div>Apellido paterno: ${doc.data().apaternomenor}
+       <div><strong>Apellido paterno:</strong> ${doc.data().apaternomenor}
           <label for="apaternomenor"></label>
           <input type="text" id="apaternomenor" name="apaternomenor" placeholder="NUEVO Apellido Paterno" style="width: 30%; margin-left:10px;">
           <button class="btn btn btn-link btn-sm" onclick="apaternomenor_submit();">Cambiar</button>
           </div>
-       <div>Apellido Materno: ${doc.data().amaternomenor}
+       <div><strong>Apellido Materno:</strong> ${doc.data().amaternomenor}
        <input type="text" id="amaternomenor" name="amaternomenor" placeholder="NUEVO Apellido Materno" style="width: 30%; margin-left:10px;">
        <button class="btn btn btn-link btn-sm" onclick="amaternomenor_submit();">Cambiar</button>
        </div>
-       <div>Edad: ${doc.data().edadmenor}
+       <div><strong>Edad:</strong> ${doc.data().edadmenor}
        <input type="text" id="edadmenor" name="edadmenor" placeholder="NUEVA Edad" style="width: 30%; margin-left:10px;">
        <button class="btn btn btn-link btn-sm" onclick="edadmenor_submit();">Cambiar</button>
        </div>
-       <div>CURP: ${doc.data().curpmenor}
+       <div><strong>CURP:</strong> ${doc.data().curpmenor}
        <input type="text" id="curpmenor" name="curpmenor" placeholder="NUEVO CURP" style="width: 30%; margin-left:10px;">
        <button class="btn btn btn-link btn-sm" onclick="curpmenor_submit();">Cambiar</button>
        </div>
-       <div>Ciudad de Nacimiento: ${doc.data().ciudadmenor}
+       <div><strong>Ciudad de Nacimiento:</strong> ${doc.data().ciudadmenor}
        <input type="text" id="ciudadmenor" name="ciudadmenor" placeholder="NUEVA CIUDAD DE NACIMIENTO" style="width: 30%; margin-left:10px;">
        <button class="btn btn btn-link btn-sm" onclick="ciudadmenor_submit();">Cambiar</button>
        </div>
-       <div>Estado de Nacimiento: ${doc.data().estadomenor}
+       <div><strong>Estado de Nacimiento:</strong> ${doc.data().estadomenor}
        <input type="text" id="estadomenor" name="estadomenor" placeholder="NUEVO ESTADO DE NACIMIENTO" style="width: 30%; margin-left:10px;">
        <button class="btn btn btn-link btn-sm" onclick="estadomenor_submit();">Cambiar</button>
        </div>
        <div style="padding-top:20px;">
        <div><strong>Tutor registrado:</strong></div>
-       <div>Nombre: ${doc.data().nametutor}
+       <div><strong>Nombre:</strong> ${doc.data().nametutor}
        <input type="text" id="nametutor" name="nametutor" placeholder="NUEVO Nombre de Tutor" style="width: 30%; margin-left:10px;">
        <button class="btn btn btn-link btn-sm" onclick="nametutor_submit();">Cambiar</button></div>
-       <div>Apellido paterno: ${doc.data().apaternotutor}
+       <div><strong>Apellido paterno:</strong> ${doc.data().apaternotutor}
        <input type="text" id="apaternotutor" name="apaternotutor" placeholder="NUEVO Apellido Paterno" style="width: 30%; margin-left:10px;">
        <button class="btn btn btn-link btn-sm" onclick="apaternotutor_submit();">Cambiar</button></div>
-       <div>Apellido materno: ${doc.data().amaternotutor}
+       <div><strong>Apellido materno:</strong> ${doc.data().amaternotutor}
        <input type="text" id="amaternotutor" name="amaternotutor" placeholder="NUEVO Apellido Materno" style="width: 30%; margin-left:10px;">
        <button class="btn btn btn-link btn-sm" onclick="amaternotutor_submit();">Cambiar</button></div>
-       <div>Domicilio: ${doc.data().domiciliotutor}
+       <div><strong>Domicilio:</strong> ${doc.data().domiciliotutor}
        <input type="text" id="domiciliotutor" name="domiciliotutor" placeholder="NUEVO Domicilio, Calle y Número" style="width: 30%; margin-left:10px;">
        <button class="btn btn btn-link btn-sm" onclick="domiciliotutor_submit();">Cambiar</button></div>
-       <div>Colonia: ${doc.data().coloniatutor}
+       <div><strong>Colonia:</strong> ${doc.data().coloniatutor}
        <input type="text" id="coloniatutor" name="coloniatutor" placeholder="NUEVA Colonia" style="width: 30%; margin-left:10px;">
        <button class="btn btn btn-link btn-sm" onclick="coloniatutor_submit();">Cambiar</button></div>
-       <div>Código Postal: ${doc.data().cptutor}
+       <div><strong>Código Postal:</strong> ${doc.data().cptutor}
        <input type="text" id="cptutor" name="cptutor" placeholder="NUEVO Código Postal" style="width: 30%; margin-left:10px;">
        <button class="btn btn btn-link btn-sm" onclick="cptutor_submit();">Cambiar</button></div>
-       <div>Municipio: ${doc.data().mpiotutor}
+       <div><strong>Municipio:</strong> ${doc.data().mpiotutor}
        <input type="text" id="mpiotutor" name="mpiotutor" placeholder="NUEVO Municipio" style="width: 30%; margin-left:10px;">
        <button class="btn btn btn-link btn-sm" onclick="mpiotutor_submit();">Cambiar</button></div>
-       <div>Tel. casa u oficna: ${doc.data().teltutor}
+       <div><strong>Tel. casa u oficna:</strong> ${doc.data().teltutor}
        <input type="text" id="teltutor" name="teltutor" placeholder="NUEVO Teléfono de Casa u Oficina" style="width: 30%; margin-left:10px;">
        <button class="btn btn btn-link btn-sm" onclick="teltutor_submit();">Cambiar</button></div>
-       <div>Celular: ${doc.data().celtutor}
+       <div><strong>Celular:</strong> ${doc.data().celtutor}
        <input type="text" id="celtutor" name="celtutor" placeholder="NUEVO Teléfono Celular" style="width: 30%; margin-left:10px;">
        <button class="btn btn btn-link btn-sm" onclick="celtutor_submit();">Cambiar</button></div>
-       <div>Correo Electrónico: ${doc.data().mailtutor}
+       <div><strong>Correo Electrónico:</strong> ${doc.data().mailtutor}
        <input type="text" id="mailtutor" name="mailtutor" placeholder="NUEVO Correo Electrónico" style="width: 30%; margin-left:10px;">
        <button class="btn btn btn-link btn-sm" onclick="mailtutor_submit();">Cambiar</button></div>
-       <div>Red social: ${doc.data().redtutor}
+       <div><strong>Red social:</strong> ${doc.data().redtutor}
        <input type="text" id="redtutor" name="redtutor" placeholder="NUEVA Red Social de Contacto" style="width: 30%; margin-left:10px;">
        <button class="btn btn btn-link btn-sm" onclick="redtutor_submit();">Cambiar</button></div>
        <div style="padding-top:20px;">
        <div><strong>Estatus:</strong></div>
-       <div>Estatus del Aviso de Privacidad: ${doc.data().privacidad}
+       <div><strong>Estatus del Aviso de Privacidad:</strong> ${doc.data().privacidad}
        <input type="text" id="privacidad" name="privacidad" placeholder="Escriba un comentario" style="width: 30%; margin-left:10px;">
        <button class="btn btn btn-link btn-sm" onclick="privacidad_submit();">Cambiar</button></div>
-       <div>Estatus del Aviso del Amparo: ${doc.data().amparo}
+       <div><strong>Estatus del Aviso del Amparo:</strong> ${doc.data().amparo}
        <input type="text" id="amparo" name="redtutor" placeholder="Escriba un comentario" style="width: 30%; margin-left:10px;">
        <button class="btn btn btn-link btn-sm" onclick="amparo_submit();">Cambiar</button></div>
        <div style="padding-top:20px;">

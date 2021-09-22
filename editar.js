@@ -95,7 +95,7 @@ var get_user = function(email) {
 //- - - - - - - - - - - - - - - - - - - - - - - - - - -//
       
       
-  //- - - - - - - - -  update name - - - - - - - - - - - -//  
+  //- - - - - - - - -  update name menor- - - - - - - - - - - -//  
  
       var push_to_firebase = function(data){
       var db = firebase.firestore();
@@ -120,7 +120,7 @@ var get_user = function(email) {
        push_to_firebase(data);
       };
 
-  //- - - - - - - - -  update paterno - - - - - - - - - - - -//  
+  //- - - - - - - - -  update paterno menor- - - - - - - - - - - -//  
   var push_to_firebased = function(data){
       var db = firebase.firestore();
 
@@ -144,8 +144,323 @@ var get_user = function(email) {
        push_to_firebased(data);
       };
  
+ //- - - - - - - - -  update materno menor - - - - - - - - - - - -//  
+  var push_to_firebasee = function(data){
+      var db = firebase.firestore();
+
+        db.collection("messages").doc(urlParams.get('ID')).update({
+        amaternomenor: data["amaternomenor"], 
+        })
+   
+       .then(function(docRef) {
+            location.reload();
+        })
+        .catch(function(error) {
+            console.error("Message could not be sent: ", error);
+        });
+      }
+      var amaternomenor_submit = function(){
+      var amaternomenor = document.getElementById("amaternomenor");
+        
+      var data = {
+          "amaternomenor": amaternomenor.value,
+        }
+       push_to_firebasee(data);
+      };
+
+ //- - - - - - - - -  update edad menor - - - - - - - - - - - -//  
+  var push_to_firebasef = function(data){
+      var db = firebase.firestore();
+
+        db.collection("messages").doc(urlParams.get('ID')).update({
+        edadmenor: data["edadmenor"], 
+        })
+   
+       .then(function(docRef) {
+            location.reload();
+        })
+        .catch(function(error) {
+            console.error("Message could not be sent: ", error);
+        });
+      }
+      var edadmenor_submit = function(){
+      var edadmenor = document.getElementById("edadmenor");
+        
+      var data = {
+          "edadmenor": edadmenor.value,
+        }
+       push_to_firebasef(data);
+      };
+
+ //- - - - - - - - -  update CURP menor - - - - - - - - - - - -//  
+  var push_to_firebaseg = function(data){
+      var db = firebase.firestore();
+
+        db.collection("messages").doc(urlParams.get('ID')).update({
+        curpmenor: data["curpmenor"], 
+        })
+   
+       .then(function(docRef) {
+            location.reload();
+        })
+        .catch(function(error) {
+            console.error("Message could not be sent: ", error);
+        });
+      }
+      var curpmenor_submit = function(){
+      var curpmenor = document.getElementById("curpmenor");
+        
+      var data = {
+          "curpmenor": curpmenor.value,
+        }
+       push_to_firebaseg(data);
+      };
  
+ //- - - - - - - - -  update Nombre tutor - - - - - - - - - - - -//  
+  var push_to_firebaseh = function(data){
+      var db = firebase.firestore();
+
+        db.collection("messages").doc(urlParams.get('ID')).update({
+        nametutor: data["nametutor"], 
+        })
+   
+       .then(function(docRef) {
+            location.reload();
+        })
+        .catch(function(error) {
+            console.error("Message could not be sent: ", error);
+        });
+      }
+      var nametutor_submit = function(){
+      var nametutor = document.getElementById("nametutor");
+        
+      var data = {
+          "nametutor": nametutor.value,
+        }
+       push_to_firebaseh(data);
+      };
       
+ //- - - - - - - - -  paterno tutor - - - - - - - - - - - -//  
+  var push_to_firebasei = function(data){
+      var db = firebase.firestore();
+
+        db.collection("messages").doc(urlParams.get('ID')).update({
+        apaternotutor: data["apaternotutor"], 
+        })
+   
+       .then(function(docRef) {
+            location.reload();
+        })
+        .catch(function(error) {
+            console.error("Message could not be sent: ", error);
+        });
+      }
+      var nametutorr_submit = function(){
+      var apaternotutor = document.getElementById("apaternotutor");
+        
+      var data = {
+          "apaternotutor": apaternotutor.value,
+        }
+       push_to_firebasei(data);
+      };
+
+
+ //- - - - - - - - -  materno tutor - - - - - - - - - - - -//  
+  var push_to_firebasej = function(data){
+      var db = firebase.firestore();
+
+        db.collection("messages").doc(urlParams.get('ID')).update({
+        amaternotutor: data["amaternotutor"], 
+        })
+   
+       .then(function(docRef) {
+            location.reload();
+        })
+        .catch(function(error) {
+            console.error("Message could not be sent: ", error);
+        });
+      }
+      var nametutor_submit = function(){
+      var amaternotutor = document.getElementById("amaternotutor");
+        
+      var data = {
+          "amaternotutor": amaternotutor.value,
+        }
+       push_to_firebasej(data);
+      };
+
+ //- - - - - - - - -  domicilio tutor - - - - - - - - - - - -//  
+  var push_to_firebasek = function(data){
+      var db = firebase.firestore();
+
+        db.collection("messages").doc(urlParams.get('ID')).update({
+        domiciliotutor: data["domiciliotutor"], 
+        })
+   
+       .then(function(docRef) {
+            location.reload();
+        })
+        .catch(function(error) {
+            console.error("Message could not be sent: ", error);
+        });
+      }
+      var domiciliotutor_submit = function(){
+      var domiciliotutor = document.getElementById("domiciliotutor");
+        
+      var data = {
+          "domiciliotutor": domiciliotutor.value,
+        }
+       push_to_firebasek(data);
+      };
+
+ //- - - - - - - - -  cp tutor - - - - - - - - - - - -//  
+  var push_to_firebasel = function(data){
+      var db = firebase.firestore();
+
+        db.collection("messages").doc(urlParams.get('ID')).update({
+        cptutor: data["cptutor"], 
+        })
+   
+       .then(function(docRef) {
+            location.reload();
+        })
+        .catch(function(error) {
+            console.error("Message could not be sent: ", error);
+        });
+      }
+      var cptutor_submit = function(){
+      var cptutor = document.getElementById("cptutor");
+        
+      var data = {
+          "cptutor": cptutor.value,
+        }
+       push_to_firebasel(data);
+      };
+
+
+ //- - - - - - - - -  mpio tutor - - - - - - - - - - - -//  
+  var push_to_firebasem = function(data){
+      var db = firebase.firestore();
+
+        db.collection("messages").doc(urlParams.get('ID')).update({
+        mpiotutor: data["mpiotutor"], 
+        })
+   
+       .then(function(docRef) {
+            location.reload();
+        })
+        .catch(function(error) {
+            console.error("Message could not be sent: ", error);
+        });
+      }
+      var mpiotutor_submit = function(){
+      var mpiotutor = document.getElementById("mpiotutor");
+        
+      var data = {
+          "mpiotutor": mpiotutor.value,
+        }
+       push_to_firebasem(data);
+      };
+
+
+ //- - - - - - - - -  tel casa - - - - - - - - - - - -//  
+  var push_to_firebasen = function(data){
+      var db = firebase.firestore();
+
+        db.collection("messages").doc(urlParams.get('ID')).update({
+        teltutor: data["teltutor"], 
+        })
+   
+       .then(function(docRef) {
+            location.reload();
+        })
+        .catch(function(error) {
+            console.error("Message could not be sent: ", error);
+        });
+      }
+      var teltutor_submit = function(){
+      var teltutor = document.getElementById("teltutor");
+        
+      var data = {
+          "teltutor": teltutor.value,
+        }
+       push_to_firebasen(data);
+      };
+
+ //- - - - - - - - -  cel tutor - - - - - - - - - - - -//  
+  var push_to_firebaseo = function(data){
+      var db = firebase.firestore();
+
+        db.collection("messages").doc(urlParams.get('ID')).update({
+        celtutor: data["celtutor"], 
+        })
+   
+       .then(function(docRef) {
+            location.reload();
+        })
+        .catch(function(error) {
+            console.error("Message could not be sent: ", error);
+        });
+      }
+      var celtutor_submit = function(){
+      var celtutor = document.getElementById("celtutor");
+        
+      var data = {
+          "celtutor": celtutor.value,
+        }
+       push_to_firebaseo(data);
+      };
+
+ //- - - - - - - - -  mail tutor - - - - - - - - - - - -//  
+  var push_to_firebaseo = function(data){
+      var db = firebasep.firestore();
+
+        db.collection("messages").doc(urlParams.get('ID')).update({
+        mailtutor: data["mailtutor"], 
+        })
+   
+       .then(function(docRef) {
+            location.reload();
+        })
+        .catch(function(error) {
+            console.error("Message could not be sent: ", error);
+        });
+      }
+      var mailtutor_submit = function(){
+      var mailtutor = document.getElementById("mailtutor");
+        
+      var data = {
+          "mailtutor": mailtutor.value,
+        }
+       push_to_firebasep(data);
+      };
+
+ //- - - - - - - - -  reed tutor - - - - - - - - - - - -//  
+  var push_to_firebaseo = function(data){
+      var db = firebaseq.firestore();
+
+        db.collection("messages").doc(urlParams.get('ID')).update({
+        redtutor: data["redtutor"], 
+        })
+   
+       .then(function(docRef) {
+            location.reload();
+        })
+        .catch(function(error) {
+            console.error("Message could not be sent: ", error);
+        });
+      }
+      var redtutor_submit = function(){
+      var redtutor = document.getElementById("redtutor");
+        
+      var data = {
+          "redtutor": redtutor.value,
+        }
+       push_to_firebaseq(data);
+      };
+
+
+
 
 function login() {
   var email = document.getElementById("email_login").value;

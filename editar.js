@@ -82,10 +82,10 @@ var get_user = function(email) {
        <div style="padding-top:20px;">
        <div><strong>Estatus:</strong></div>
        <div>Estatus del Aviso de Privacidad: ${doc.data().privacidad}
-       <input type="text" id="privacidad" name="privacidad" placeholder="¿Ya imprimió el aviso de privacidad?" style="width: 30%; margin-left:10px;">
+       <input type="text" id="privacidad" name="privacidad" placeholder="Escriba un comentario" style="width: 30%; margin-left:10px;">
        <button class="btn btn btn-link btn-sm" onclick="privacidad_submit();">Cambiar</button></div>
        <div>Estatus del Aviso del Amparo: ${doc.data().amparo}
-       <input type="text" id="amparo" name="redtutor" placeholder="¿Ya imprimió el amaparo?" style="width: 30%; margin-left:10px;">
+       <input type="text" id="amparo" name="redtutor" placeholder="Escriba un comentario" style="width: 30%; margin-left:10px;">
        <button class="btn btn btn-link btn-sm" onclick="amparo_submit();">Cambiar</button></div>
        <div style="padding-top:20px;">
        <input type="button" class="btn btn-danger" value="Salir del Editor y Regresar" onclick="window.location.replace('user.html')"/>

@@ -30,8 +30,8 @@ var get_user = function(email) {
        <div>Red social: ${doc.data().redtutor}</div>
        <div style="padding-top:20px;">
        <div class="alert alert-primary" role="alert"><strong>Estatus:</strong></div>
-       <div><strong>Aviso de Privacidad Impreso:</strong> ${doc.data().redtutor}</div>
-       <div><strong>Amparo Impreso:</strong> ${doc.data().redtutor}</div>
+       <div><strong>Aviso de Privacidad Impreso:</strong> ${doc.data().privacidad}</div>
+       <div><strong>Amparo Impreso:</strong> ${doc.data().amparo}</div>
        <div style="padding-bottom:60px; padding-top:20px; text-align:right;">
        <input type="button" class="btn btn-info" value="Editar o Cambiar Campos" onclick="window.location.replace('https://private.vacunas.chaledelafuente.mx/editar.html?ID=${doc.id}')" />
        <input type="button" class="btn btn-dark" value="Ver e imprimir el aviso de privacidad" onclick="window.open('https://private.vacunas.chaledelafuente.mx/legal.html?ID=${doc.id}')" />
@@ -72,6 +72,8 @@ var push_to_firebase = function(data){
               redtutor: data["redtutor"],
               mailtutor: data["mailtutor"],
               email: data["email"],
+           privacisas: data["privacidad"],
+           amparo: data["amparo"],
             timestamp: Date.now()
         })
         .then(function(docRef) {
@@ -102,6 +104,8 @@ var push_to_firebase = function(data){
           var redtutor = document.getElementById("redtutor");
          var mailtutor = document.getElementById("mailtutor");
          var email = document.getElementById("email");
+         var privacidad = document.getElementById("privacidad");
+         var amparo = document.getElementById("amparo");
 
         var data = {
          "namemenor": namemenor.value,
@@ -120,7 +124,9 @@ var push_to_firebase = function(data){
             "celtutor": celtutor.value,
             "redtutor": redtutor.value,
             "mailtutor": mailtutor.value,
-           "email": email.value
+           "email": email.value,
+           "privaidad": email.privacidad,
+           "amparo": email.amparo
         }
         push_to_firebase(data);
           

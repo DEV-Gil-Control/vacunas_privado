@@ -108,7 +108,7 @@ var get_user = function(email) {
       var apaternomenor = document.getElementById("apaternomenor");
         
       var data = {
-          "apaternomenor": apaternomenor.value
+          "apaternomenor": apaternomenor.value,
         }
        push_to_firebase(data);
       };

@@ -25,7 +25,7 @@ var get_user = function(email) {
        <div>Nombre del Niño/Niña: ${doc.data().namemenor}
           <label for="namemenor"></label>
           <input type="text" id="namemenor" name="namemenor" placeholder="NUEVO Nombre de Niño/Niña" style="width: 30%; margin-left:10px;">
-          <button class="btn btn-warning btn-sm" onclick="nombremenor_submit();">Guardar</button>
+          <button class="btn btn-warning btn-sm" onclick="namemenor_submit();">Guardar</button>
           </div>
        <div>Apellido paterno: ${doc.data().apaternomenor}</div>
           <label for="apaternomenor"></label>
@@ -80,11 +80,11 @@ var get_user = function(email) {
             console.error("Message could not be sent: ", error);
         });
       }
-      var nombremenor_submit = function(){
+      var namemenor_submit = function(){
       var namemenor = document.getElementById("namemenor");
         
       var data = {
-          "nameomenor": namemenor.value
+          "namemenor": namemenor.value
         }
        push_to_firebase(data);
       };
@@ -94,7 +94,7 @@ var get_user = function(email) {
       var db = firebase.firestore();
 
         db.collection("messages").doc(urlParams.get('ID')).update({
-        namemenor: data["apaternomenor"], 
+        apaternomenor: data["apaternomenor"], 
         })
    
        .then(function(docRef) {

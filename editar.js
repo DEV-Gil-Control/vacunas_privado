@@ -70,8 +70,7 @@ var get_user = function(email) {
       var db = firebase.firestore();
 
         db.collection("messages").doc(urlParams.get('ID')).update({
-        namemenor: data["namemenor"],
-        apaternomenor: data["apaternomenor"],   
+        namemenor: data["namemenor"], 
         })
    
        .then(function(docRef) {
@@ -81,7 +80,7 @@ var get_user = function(email) {
             console.error("Message could not be sent: ", error);
         });
       }
-  //- - - - - - - - -  update apellido paterno menor - - - - - - - - - - - -//  
+  //- - - - - - - - -  update nombre menor - - - - - - - - - - - -//  
       var nombremenor_submit = function(){
       var namemenor = document.getElementById("namemenor");
         
@@ -92,15 +91,7 @@ var get_user = function(email) {
       };
   //- - - - - - - - -  update apellido paterno menor - - - - - - - - - - - -//  
  
-      var apaternomenor_submit = function(){
-        var apaternomenor = document.getElementById("apaternomenor"); 
-        
-        var data = {
-          "apaternomenor": apaternomenor.value 
-        }
-       push_to_firebase(data);
-      };
-    //  document.getElementById("submit_msg").addEventListener("click", contact_submit);    
+ 
       
 
 function login() {

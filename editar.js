@@ -241,7 +241,7 @@ var get_user = function(email) {
       };
       
  //- - - - - - - - -  paterno tutor - - - - - - - - - - - -//  
-  var push_to_firebasei = function(data){
+ var push_to_firebasei = function(data){
       var db = firebase.firestore();
 
         db.collection("messages").doc(urlParams.get('ID')).update({
@@ -255,7 +255,7 @@ var get_user = function(email) {
             console.error("Message could not be sent: ", error);
         });
       }
-      var nametutorr_submit = function(){
+      var apaternotutor_submit = function(){
       var apaternotutor = document.getElementById("apaternotutor");
         
       var data = {
@@ -266,7 +266,7 @@ var get_user = function(email) {
 
 
  //- - - - - - - - -  materno tutor - - - - - - - - - - - -//  
-  var push_to_firebasej = function(data){
+ var push_to_firebasej = function(data){
       var db = firebase.firestore();
 
         db.collection("messages").doc(urlParams.get('ID')).update({
@@ -280,7 +280,7 @@ var get_user = function(email) {
             console.error("Message could not be sent: ", error);
         });
       }
-      var nametutor_submit = function(){
+      var amaternotutor_submit = function(){
       var amaternotutor = document.getElementById("amaternotutor");
         
       var data = {

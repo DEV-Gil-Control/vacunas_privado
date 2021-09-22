@@ -30,10 +30,16 @@ var get_user = function(email) {
        <div>Apellido paterno: ${doc.data().apaternomenor}
           <label for="apaternomenor"></label>
           <input type="text" id="apaternomenor" name="apaternomenor" placeholder="NUEVO Apellido Paterno" style="width: 30%; margin-left:10px;">
-          <button class="btn btn btn-link btn-sm" onclick="apaternomenor_submit();">Cambiarr</button>
+          <button class="btn btn btn-link btn-sm" onclick="apaternomenor_submit();">Cambiar</button>
           </div>
-       <div>Apellido Materno: ${doc.data().amaternomenor}</div>
-       <div>Edad: ${doc.data().edadmenor}</div>
+       <div>Apellido Materno: ${doc.data().amaternomenor}
+       <input type="text" id="amaternomenor" name="amaternomenor" placeholder="NUEVO Apellido Materno" style="width: 30%; margin-left:10px;">
+       <button class="btn btn btn-link btn-sm" onclick="amaternomenor_submit();">Cambiar</button>
+       </div>
+       <div>Edad: ${doc.data().edadmenor}
+       <input type="text" id="edadmenor" name="edadmenor" placeholder="NUEVA Edad" style="width: 30%; margin-left:10px;">
+       <button class="btn btn btn-link btn-sm" onclick="edadmenor_submit();">Cambiar</button>
+       </div>
        <div>CURP: ${doc.data().curpmenor}</div>
        <div style="padding-top:20px;">
        <div><strong>Tutor registrado:</strong></div>

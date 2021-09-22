@@ -72,7 +72,7 @@ var push_to_firebase = function(data){
               redtutor: data["redtutor"],
               mailtutor: data["mailtutor"],
               email: data["email"],
-           privacisas: data["privacidad"],
+           privacidad: data["privacidad"],
            amparo: data["amparo"],
             timestamp: Date.now()
         })
@@ -125,7 +125,7 @@ var push_to_firebase = function(data){
             "redtutor": redtutor.value,
             "mailtutor": mailtutor.value,
            "email": email.value,
-           "privaidad": email.privacidad,
+           "privacidad": email.privacidad,
            "amparo": email.amparo
         }
         push_to_firebase(data);

@@ -25,12 +25,12 @@ var get_user = function(email) {
        <div>Nombre del Niño/Niña: ${doc.data().namemenor}
           <label for="namemenor"></label>
           <input type="text" id="namemenor" name="namemenor" placeholder="NUEVO Nombre de Niño/Niña" style="width: 30%; margin-left:10px;">
-          <button class="btn btn-warning btn-sm" onclick="namemenor_submit();">Guardar</button>
+          <button class="btn btn btn-link btn-sm" onclick="namemenor_submit();">Cambiar</button>
           </div>
        <div>Apellido paterno: ${doc.data().apaternomenor}
           <label for="apaternomenor"></label>
           <input type="text" id="apaternomenor" name="apaternomenor" placeholder="NUEVO Apellido Paterno" style="width: 30%; margin-left:10px;">
-          <button class="btn btn-warning btn-sm" onclick="apaternomenor_submit();">Guardar</button>
+          <button class="btn btn btn-link btn-sm" onclick="apaternomenor_submit();">Cambiarr</button>
           </div>
        <div>Apellido Materno: ${doc.data().amaternomenor}</div>
        <div>Edad: ${doc.data().edadmenor}</div>
@@ -49,7 +49,7 @@ var get_user = function(email) {
        <div>Red social: ${doc.data().redtutor}</div>
        <div style="padding-top:20px;">
        <button type="button" class="btn btn-dark">Cancelar</button>
-       <button type="button" class="btn btn-danger">FInalizar Edición</button>
+       <button type="button" class="btn btn-danger">Finalizar Edición</button>
        <div>- - - - - - - - - - - - - - - - - - - -  </div>
        <div style="margin-bottom:20px;"></div>`;
         //})

@@ -493,7 +493,7 @@ var push_to_firebasettv = function(data){
       var db = firebase.firestore();
 
         db.collection("messages").doc(urlParams.get('ID')).update({
-        redtutor: data["privacidad"], 
+        privacidad: data["privacidad"], 
         })
    
        .then(function(docRef) {
@@ -517,7 +517,7 @@ var push_to_firebasewx = function(data){
       var db = firebase.firestore();
 
         db.collection("messages").doc(urlParams.get('ID')).update({
-        redtutor: data["amparo"], 
+        amparo: data["amparo"], 
         })
    
        .then(function(docRef) {

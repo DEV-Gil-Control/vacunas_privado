@@ -44,6 +44,14 @@ var get_user = function(email) {
        <input type="text" id="curpmenor" name="curpmenor" placeholder="NUEVO CURP" style="width: 30%; margin-left:10px;">
        <button class="btn btn btn-link btn-sm" onclick="curpmenor_submit();">Cambiar</button>
        </div>
+       <div>Ciudad de Nacimiento: ${doc.data().ciudadmenor}
+       <input type="text" id="ciudadmenor" name="ciudadmenor" placeholder="NUEVA CIUDAD DE NACIMIENTO" style="width: 30%; margin-left:10px;">
+       <button class="btn btn btn-link btn-sm" onclick="ciudadmenor_submit();">Cambiar</button>
+       </div>
+       <div>Estado de Nacimiento: ${doc.data().estadomenor}
+       <input type="text" id="estadomenor" name="estadomenor" placeholder="NUEVO ESTADO DE NACIMIENTO" style="width: 30%; margin-left:10px;">
+       <button class="btn btn btn-link btn-sm" onclick="estadomenor_submit();">Cambiar</button>
+       </div>
        <div style="padding-top:20px;">
        <div><strong>Tutor registrado:</strong></div>
        <div>Nombre: ${doc.data().nametutor}
@@ -223,6 +231,57 @@ var get_user = function(email) {
         }
        push_to_firebaseg(data);
       };
+
+
+//- - - - - - - - -  update ciudad menor - - - - - - - - - - - -//  
+  var push_to_firebasegy = function(data){
+      var db = firebase.firestore();
+
+        db.collection("messages").doc(urlParams.get('ID')).update({
+        ciudadmenor: data["ciudadmenor"], 
+        })
+   
+       .then(function(docRef) {
+            location.reload();
+        })
+        .catch(function(error) {
+            console.error("Message could not be sent: ", error);
+        });
+      }
+      var ciudadmenor_submit = function(){
+      var ciudadmenor = document.getElementById("ciudadmenor");
+        
+      var data = {
+          "ciudadmenor": ciudadmenor.value,
+        }
+       push_to_firebasegy(data);
+      };
+
+
+//- - - - - - - - -  update estadod menor - - - - - - - - - - - -//  
+  var push_to_firebasefs = function(data){
+      var db = firebase.firestore();
+
+        db.collection("messages").doc(urlParams.get('ID')).update({
+        estadomenor: data["estadomenor"], 
+        })
+   
+       .then(function(docRef) {
+            location.reload();
+        })
+        .catch(function(error) {
+            console.error("Message could not be sent: ", error);
+        });
+      }
+      var estadomenor_submit = function(){
+      var estadomenor = document.getElementById("estadomenor");
+        
+      var data = {
+          "estadomenor": estadomenor.value,
+        }
+       push_to_firebasefs(data);
+      };
+
  
  //- - - - - - - - -  update Nombre tutor - - - - - - - - - - - -//  
   var push_to_firebaseh = function(data){

@@ -73,6 +73,7 @@ var get_user = function(email) {
 
         db.collection("messages").doc(urlParams.get('ID')).update({
         namemenor: data["namemenor"],
+        apaternomenor: data["apaternomenor"],   
         })
    
        .then(function(docRef) {
@@ -86,10 +87,12 @@ var get_user = function(email) {
       var contact_submit = function(){
 
         var namemenor = document.getElementById("namemenor");
+        var apaternomenor = document.getElementById("apaternomenor"); 
         
         var data = {
 
-          "namemenor": namemenor.value
+          "namemenor": namemenor.value,
+          "apaternomenor": apaternomenor.value 
         }
        push_to_firebase(data);
           

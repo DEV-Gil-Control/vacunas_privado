@@ -79,6 +79,8 @@ var get_user = function(email) {
        <div>Red social: ${doc.data().redtutor}
        <input type="text" id="redtutor" name="redtutor" placeholder="NUEVA Red Social de Contacto" style="width: 30%; margin-left:10px;">
        <button class="btn btn btn-link btn-sm" onclick="redtutor_submit();">Cambiar</button></div>
+       <div style="padding-top:20px;">
+       <div><strong>Estatus:</strong></div>
        <div>Estatus del Aviso de Privacidad: ${doc.data().privacidad}
        <input type="text" id="privacidad" name="privacidad" placeholder="¿Ya imprimió el aviso de privacidad?" style="width: 30%; margin-left:10px;">
        <button class="btn btn btn-link btn-sm" onclick="privacidad_submit();">Cambiar</button></div>

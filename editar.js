@@ -27,9 +27,9 @@ var get_user = function(email) {
           <input type="text" id="namemenor" name="namemenor" placeholder="NUEVO Nombre de Niño/Niña" style="width: 30%; margin-left:10px;">
           <button class="btn btn-warning btn-sm" onclick="namemenor_submit();">Guardar</button>
           </div>
-       <div>Apellido paterno: ${doc.data().apaternomenor}</div>
+       <div>Apellido paterno: ${doc.data().apaternomenor}
           <label for="apaternomenor"></label>
-          <input type="text" id="apaternomenor" name="apaternomenor" placeholder="NUEVO Apellido Paterno" style="width: 30%;">
+          <input type="text" id="apaternomenor" name="apaternomenor" placeholder="NUEVO Apellido Paterno" style="width: 30%; margin-left:10px;">
           <button class="btn btn-warning btn-sm" onclick="apaternomenor_submit();">Guardar</button>
           </div>
        <div>Apellido Materno: ${doc.data().amaternomenor}</div>

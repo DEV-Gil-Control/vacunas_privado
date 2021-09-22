@@ -28,6 +28,7 @@ var get_user = function(email) {
        <div>Celular: ${doc.data().celtutor}</div>
        <div>Correo Electrónico: ${doc.data().mailtutor}</div>
        <div>Red social: ${doc.data().redtutor}</div>
+       <div style="padding-bottom:20px; text-align:right;">
        <div class="alert alert-primary" role="alert"><strong>Estatus:</strong></div>
        <div>Aviso de Privacidad Impreso: ${doc.data().redtutor}</div>
        <div>Amparo Impreso: ${doc.data().redtutor}</div>

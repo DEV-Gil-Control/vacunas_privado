@@ -217,7 +217,7 @@ var get_user = function(email) {
       };
  
  //- - - - - - - - -  update Nombre tutor - - - - - - - - - - - -//  
-  var push_to_firebaseh = function(data){
+  var push_to_firebasehh = function(data){
       var db = firebase.firestore();
 
         db.collection("messages").doc(urlParams.get('ID')).update({
@@ -237,7 +237,7 @@ var get_user = function(email) {
       var data = {
           "nametutor": nametutor.value,
         }
-       push_to_firebaseh(data);
+       push_to_firebasehh(data);
       };
       
  //- - - - - - - - -  paterno tutor - - - - - - - - - - - -//  

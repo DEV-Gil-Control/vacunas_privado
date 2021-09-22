@@ -14,6 +14,8 @@ var get_user = function(email) {
        <div>Apellido paterno: ${doc.data().apaternomenor}</div>
        <div>Apellido Materno: ${doc.data().amaternomenor}</div>
        <div>Edad: ${doc.data().edadmenor}</div>
+       <div>Ciudad de Nacimiento: ${doc.data().ciudadmenor}</div>
+       <div>Estado de Nacimiento: ${doc.data().estadomenor}</div>
        <div>CURP: ${doc.data().curpmenor}</div>
        <div style="padding-top:20px;">
        <div class="alert alert-primary" role="alert"><strong>Tutor responsable que lo registra:</strong></div>
@@ -60,6 +62,8 @@ var push_to_firebase = function(data){
             amaternomenor: data["amaternomenor"],
            edadmenor: data["edadmenor"], 
            curpmenor: data["curpmenor"],
+           ciudadmenor: data["ciudadmenor"],
+           estadomenor: data["estadomenor"],
               nametutor: data["nametutor"],
               apaternotutor: data["apaternotutor"],
               amaternotutor: data["amaternotutor"],
@@ -91,7 +95,9 @@ var push_to_firebase = function(data){
          var apaternomenor = document.getElementById("apaternomenor");
          var amaternomenor = document.getElementById("amaternomenor");
          var edadmenor = document.getElementById("edadmenor");
-         var curpmenor = document.getElementById("curpmenor"); 
+         var curpmenor = document.getElementById("curpmenor");
+         var ciudadmenor = document.getElementById("ciudadmenor");
+         var estadomenor = document.getElementById("estadomenor");
           var nametutor = document.getElementById("nametutor");
           var apaternotutor = document.getElementById("apaternotutor");
           var amaternotutor = document.getElementById("amaternotutor");
@@ -113,6 +119,8 @@ var push_to_firebase = function(data){
           "amaternomenor": amaternomenor.value,
            "edadmenor": edadmenor.value,
           "curpmenor": curpmenor.value,
+            "ciudadmenor": ciudadmenor.value,
+            "estadomenor": estadomenor.value,
             "nametutor": nametutor.value,
             "apaternotutor": apaternotutor.value,
             "amaternotutor": amaternotutor.value,

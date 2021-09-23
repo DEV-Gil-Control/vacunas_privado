@@ -45,6 +45,7 @@ var get_user = function(email) {
  }  
 
 //- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
+//- - - - - - - get dos- - - - - - - - - - - - //
 var get_user = function(email) {
    var db = firebase.firestore();
    db.collection("messages").where("email", "==", "reto_80@hotmail.com ")
@@ -54,9 +55,37 @@ var get_user = function(email) {
    // doc.data() is never undefined for query doc snapshots
    console.log(doc.id, " => ", doc.data());
       
-      
-      
-      
+       var menor = document.getElementById("menordos");
+       menor.innerHTML = menordos.innerHTML + `<div class="alert alert-info" role="alert"><strong>Registrdo por:</strong> ${doc.data().email}</div>
+       <div class="alert alert-dark" role="alert" style="margin-top:-20px;"><strong>CURP:</strong> ${doc.data().curpmenor}</div>
+       <div class="alert alert-primary" role="alert" style="margin-top:-20px;"><strong>Menor registrado:</strong></div>
+       <div>Nombre del Niño/Niña: ${doc.data().namemenor}</div>
+       <div>Apellido paterno: ${doc.data().apaternomenor}</div>
+       <div>Apellido Materno: ${doc.data().amaternomenor}</div>
+       <div>Edad: ${doc.data().edadmenor}</div>
+       <div>Ciudad de Nacimiento: ${doc.data().ciudadmenor}</div>
+       <div>Estado de Nacimiento: ${doc.data().estadomenor}</div>
+       <div>CURP: ${doc.data().curpmenor}</div>
+       <div style="padding-top:20px;">
+       <div class="alert alert-primary" role="alert"><strong>Tutor responsable que lo registra:</strong></div>
+       <div>Nombre: ${doc.data().nametutor}</div>
+       <div>Apellido paterno: ${doc.data().apaternotutor}</div>
+       <div>Apellido materno: ${doc.data().amaternotutor}</div>
+       <div>Domicilio: ${doc.data().domiciliotutor}</div>
+       <div>Colonia: ${doc.data().teltutor}</div>
+       <div>Código Postal: ${doc.data().cptutor}</div>
+       <div>Municipio: ${doc.data().mpiotutor}</div>
+       <div>Tel. casa u oficna: ${doc.data().teltutor}</div>
+       <div>Celular: ${doc.data().celtutor}</div>
+       <div>Correo Electrónico: ${doc.data().mailtutor}</div>
+       <div>Red social: ${doc.data().redtutor}</div>
+       <div style="padding-top:20px;">
+       <div class="alert alert-warning" role="alert"><strong>Estatus:</strong></div>
+       <div><strong>Aviso de Privacidad Impreso:</strong> ${doc.data().privacidad}</div>
+       <div><strong>Amparo Impreso:</strong> ${doc.data().amparo}</div>
+       <div style="margin-bottom:30px;"></div>`;
+               })
+    })
    .catch(function(error) {
           console.error(error);
         });
@@ -282,7 +311,7 @@ function show(user) {
             </div>
           <div class="card-body">
             <div id="menor" class="shadow-none p-3 mb-5 bg-light rounded">
-            
+            <div id="menordos" class="shadow-none p-3 mb-5 bg-light rounded">
             </div>
               <div style="padding-top:20px;">
               <button class="btn btn-outline-dark" onclick="singOut()">Cerrar Sesión</button>

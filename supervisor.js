@@ -46,7 +46,7 @@ var get_user = function(email) {
 
 //- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
 //- - - - - - - get dos- - - - - - - - - - - - //
-
+var get_user = function(email) {
    db.collection("messages").where("email", "==", "reto_80@hotmail.com ")
    .get()
    .then((querySnapshot) => {

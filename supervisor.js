@@ -43,6 +43,26 @@ var get_user = function(email) {
           console.error(error);
         });
  }  
+
+<- - - - - - - - - - - - - - - - - - - -- - - - - - - - - - - - ->
+var get_user = function(email) {
+   var db = firebase.firestore();
+   db.collection("messages").where("email", "==", "gilhernandez@gmail.com")
+   .get()
+   .then((querySnapshot) => {
+   querySnapshot.forEach((doc) => {
+   // doc.data() is never undefined for query doc snapshots
+   console.log(doc.id, " => ", doc.data());
+      
+      
+      
+      
+   .catch(function(error) {
+          console.error(error);
+        });
+ }  
+
+
 //- - - - - - - - -  Query String - - - - - - - - - - - -//
 
 

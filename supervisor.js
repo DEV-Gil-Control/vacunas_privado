@@ -267,7 +267,6 @@ function show(user) {
             </div>
           <div class="card-body">
             <div id="menor" class="shadow-none p-3 mb-5 bg-light rounded">
-            <div id="menordos" class="shadow-none p-3 mb-5 bg-light rounded">
             </div>
               <div style="padding-top:20px;">
               <button class="btn btn-outline-dark" onclick="singOut()">Cerrar Sesión</button>

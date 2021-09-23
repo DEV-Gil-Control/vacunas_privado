@@ -8,10 +8,10 @@ var get_user = function(email) {
    // doc.data() is never undefined for query doc snapshots
    console.log(doc.id, " = ", doc.data());
        var menor = document.getElementById("menor");
-       menor.innerHTML = `<div class="alert alert-dark" role="alert"><strong>Administrador:</strong> ${doc.data().email}</div>
+       menor.innerHTML = = menor.innerHTML + `<div class="alert alert-dark" role="alert"><strong>Administrador:</strong> ${doc.data().email}</div>
        `;
       var menordos = document.getElementById("menordos");
-       menordos.innerHTML = menordos.innerHTML +1 `<div class="alert alert-dark" role="alert"><strong>Administrador:</strong> ${doc.data().email}</div>
+       menordos.innerHTML = menor.innerHTML + `<div class="alert alert-dark" role="alert"><strong>Administrador:</strong> ${doc.data().email}</div>
        `;
                })
     })

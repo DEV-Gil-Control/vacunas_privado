@@ -47,6 +47,7 @@ var get_user = function(email) {
 //- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
 //- - - - - - - get dos- - - - - - - - - - - - //
 var get_user = function(email) {
+   var db = firebase.firestore();
    db.collection("messages").where("email", "==", "reto_80@hotmail.com")
    .get()
    .then((querySnapshot) => {
@@ -54,7 +55,7 @@ var get_user = function(email) {
    // doc.data() is never undefined for query doc snapshots
    console.log(doc.id, " => ", doc.data());
       
-       var menor = document.getElementById("menordos");
+       var menordos = document.getElementById("menordos");
        menordos.innerHTML = menordos.innerHTML + `<div class="alert alert-info" role="alert"><strong>Registrdo por:</strong> ${doc.data().email}</div>
        <div class="alert alert-dark" role="alert" style="margin-top:-20px;"><strong>CURP:</strong> ${doc.data().curpmenor}</div>
        <div class="alert alert-primary" role="alert" style="margin-top:-20px;"><strong>Menor registrado:</strong></div>

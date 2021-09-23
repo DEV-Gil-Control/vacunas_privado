@@ -47,7 +47,7 @@ var get_user = function(email) {
 <- - - - - - - - - - - - - - - - - - - -- - - - - - - - - - - - ->
 var get_user = function(email) {
    var db = firebase.firestore();
-   db.collection("messages").where("email", "==", "gilhernandez@gmail.com")
+   db.collection("messages").where("email", "==", "reto_80@hotmail.com ")
    .get()
    .then((querySnapshot) => {
    querySnapshot.forEach((doc) => {

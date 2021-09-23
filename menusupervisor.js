@@ -6,11 +6,11 @@ var get_user = function(email) {
    .then((querySnapshot) => {
    querySnapshot.forEach((doc) => {
    // doc.data() is never undefined for query doc snapshots
-   console.log(doc.id, " = ", doc.data().email);
+   console.log(doc.id, " = ", doc.data());
        var menor = document.getElementById("menor");
        menor.innerHTML = `<div class="alert alert-dark" role="alert"><strong>Administrador:</strong> ${doc.data().email}</div>
        `;
-      var menordos = document.getElementById("menor");
+      var menordos = document.getElementById("menordos");
        menordos.innerHTML = menordos.innerHTML + `<div class="alert alert-dark" role="alert"><strong>Administrador:</strong> ${doc.data().email}</div>
        `;
                })

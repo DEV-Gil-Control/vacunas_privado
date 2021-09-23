@@ -56,7 +56,7 @@ var get_user = function(emaildos) {
    console.log(doc.id, " => ", doc.data());
       
        var menor = document.getElementById("menordos");
-       menor.innerHTML = menordos.innerHTML + `<div class="alert alert-info" role="alert"><strong>Registrdo por:</strong> ${doc.data().email}</div>
+       menordos.innerHTML = menordos.innerHTML + `<div class="alert alert-info" role="alert"><strong>Registrdo por:</strong> ${doc.data().email}</div>
        <div class="alert alert-dark" role="alert" style="margin-top:-20px;"><strong>CURP:</strong> ${doc.data().curpmenor}</div>
        <div class="alert alert-primary" role="alert" style="margin-top:-20px;"><strong>Menor registrado:</strong></div>
        <div>Nombre del Niño/Niña: ${doc.data().namemenor}</div>

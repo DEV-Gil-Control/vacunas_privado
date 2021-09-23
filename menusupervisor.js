@@ -6,7 +6,7 @@ var get_user = function(email) {
    .then((querySnapshot) => {
    querySnapshot.forEach((doc) => {
    // doc.data() is never undefined for query doc snapshots
-   console.log(doc.id, " = ", doc.data());
+   console.log(doc.id, " = ", doc.data().email);
        var menor = document.getElementById("menor");
        menor.innerHTML = `<div class="alert alert-dark" role="alert"><strong>Administrador:</strong> ${doc.data().email}</div>
        `;

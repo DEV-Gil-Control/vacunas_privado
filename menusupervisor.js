@@ -11,7 +11,7 @@ var get_user = function(email) {
        menor.innerHTML = `<div class="alert alert-dark" role="alert"><strong>Administrador:</strong> ${doc.data().email}</div>
        `;
       var menordos = document.getElementById("menor");
-       menor.innerHTML = menor.innerHTML +1 `<div class="alert alert-dark" role="alert"><strong>Administrador:</strong> ${doc.data().email}</div>
+       menor.innerHTML = menor.innerHTML + `<div class="alert alert-dark" role="alert"><strong>Administrador:</strong> ${doc.data().email}</div>
        `;
                })
     })

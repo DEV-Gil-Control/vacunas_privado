@@ -26,6 +26,10 @@ var get_user = function(email) {
        <div style="margin-bottom:5px;"></div>
        <div><strong>Edad de el/la menor de edad:</strong> ${doc.data().edadmenor}</div>
        <div style="margin-bottom:5px;"></div>
+       <div><strong>Ciudad de nacimiento:</strong> ${doc.data().ciudadmenor}</div>
+       <div style="margin-bottom:5px;"></div>
+       <div><strong>Estado de nacimiento:</strong> ${doc.data().estadomenor}</div>
+       <div style="margin-bottom:5px;"></div>
        <div><strong>CURP:</strong> ${doc.data().curpmenor}</div>
        <div style="margin-bottom:5px;"></div>
        <div><strong>Domicilio:</strong> ${doc.data().domiciliotutor}</div>
@@ -52,6 +56,10 @@ var get_user = function(email) {
           console.error(error);
         });
  }    
+
+  
+
+    //- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -//
 
 //- - - - - - - - -  push data - - - - - - - - - - - -//
 
@@ -209,7 +217,11 @@ function show(user) {
 
   if (user.emailVerified) {
     content.innerHTML = `
-      <div class="nombredelpadretutor">
+      <div class="container mt-5">
+        <div class="card">
+          <h3 class="card-header">1. DATOS GENERALES DE NIÑA/NIÑO QUE SE AMPARA</h3>
+            <div id="bientutor" style="margin-left:22px; margin-top:20px; font-weight: bold;">
+            </div>
           <div class="card-body">
             <div id="todosd" class="shadow-none p-3 mb-5 bg-light rounded">
             </div>

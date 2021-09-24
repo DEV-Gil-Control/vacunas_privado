@@ -188,7 +188,7 @@ function show(user) {
 
   if (user.emailVerified) {
     content.innerHTML = `
-    <div id="nompadre" style="display:inline-block;"></div>
+    <div id="nompadre"></div>
     `;
   }else{
     content.innerHTML = `

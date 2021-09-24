@@ -49,7 +49,7 @@ var get_user = function(email) {
        nacemenor.innerHTML = `<div>${doc.data().ciudadmenor}, ${doc.data().estadomenor}</div>
        `;
       var edadelmenor = document.getElementById("edadelmenor");
-       edadelmenor.innerHTML = `<div>${doc.data().ciudadmenor}, ${doc.data().estadomenor}</div>
+       edadelmenor.innerHTML = `<div>${doc.data().edadmenor}</div>
        `;
       
         //})

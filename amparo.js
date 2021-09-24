@@ -21,6 +21,9 @@ var get_user = function(email) {
        var nommenor = document.getElementById("nommenor");
        nommenor.innerHTML = `<div>${doc.data().namemenor} ${doc.data().apaternomenor} ${doc.data().amaternomenor}</div>
        `;
+      var quejoso = document.getElementById("quejoso");
+       quejoso.innerHTML = `<div>${doc.data().nametutor} ${doc.data().apaternotutor} ${doc.data().amaternotutor}</div>
+       `;  
         //})
     })
    .catch(function(error) {

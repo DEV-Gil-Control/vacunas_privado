@@ -16,8 +16,6 @@ var get_user = function(email) {
        <div>Edad: ${doc.data().edadmenor}</div>
        <div>Ciudad de Nacimiento: ${doc.data().ciudadmenor}</div>
        <div>Estado de Nacimiento: ${doc.data().estadomenor}</div>
-       <div>Ciudad de Nacimiento: ${doc.data().ciudadmenor}</div>
-       <div>Estado de Nacimiento: ${doc.data().estadomenor}</div>
        <div>CURP: ${doc.data().curpmenor}</div>
        <div style="padding-top:20px;">
        <div class="alert alert-primary" role="alert"><strong>Tutor responsable que lo registra:</strong></div>

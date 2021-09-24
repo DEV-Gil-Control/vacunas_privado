@@ -46,7 +46,7 @@ var get_user = function(email) {
        <div style="margin-bottom:5px;"></div>
        <div><strong>Red Social para seguimiento:</strong> ${doc.data().redtutor}</div>
        `;
-       var menor = document.getElementById("nombretutor");
+       var nombretutor = document.getElementById("nombretutor");
        nombretutor.innerHTML = `<div>${doc.data().nametutor} ${doc.data().apaternotutor} Apellido materno: ${doc.data().amaternotutor}</div>`;
       
         //})

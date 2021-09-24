@@ -41,10 +41,6 @@ var get_user = function(email) {
        <input type="button" class="btn btn-dark" value="Ver e imprimir el aviso de privacidad" onclick="window.open('https://private.vacunas.chaledelafuente.mx/legal.html?ID=${doc.id}')" />
        <button type="button" class="btn btn-success">Ver e imprimir su amparo</button>
        <div style="margin-bottom:30px;"></div>`;
-      
-      ar menor = document.getElementById("nombretutor");
-       nombretutor.innerHTML = `<div>${doc.data().nametutor} ${doc.data().apaternotutor} Apellido materno: ${doc.data().amaternotutor}</div>`;
-      
                })
     })
    .catch(function(error) {

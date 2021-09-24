@@ -188,15 +188,7 @@ function show(user) {
 
   if (user.emailVerified) {
     content.innerHTML = `
-      <div class="container mt-5">
-
-          <div class="card">
-            <div id="nompadre" class="shadow-none p-3 mb-5 bg-light rounded">
-
-            </div>
-          </div>
-        </div>
-      </div>
+    id="nompadre" class="shadow-none p-3 mb-5 bg-light rounded">
     `;
   }else{
     content.innerHTML = `

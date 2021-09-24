@@ -15,21 +15,43 @@ var get_user = function(email) {
    .get()
    .then((doc) => {
    console.log(doc.data());     
-   querySnapshot.forEach((doc) => {
+   //querySnapshot.forEach((doc) => {
    // doc.data() is never undefined for query doc snapshots
-   console.log(doc.id, " => ", doc.data());  
+   //console.log(doc.id, " => ", doc.data());  
        var nombretutor = document.getElementById("nombretutor");
-       nombretutor.innerHTML = `<div>${doc.data().nametutor} ${doc.data().apaternotutor} ${doc.data().amaternotutor}</div>`;
+       //document.urlParams.getAll('ID') ("todosd");
+       nombretutor.innerHTML = `<div><strong>Nombre del padre, madre o tutor:</strong> ${doc.data().nametutor} ${doc.data().apaternotutor} ${doc.data().amaternotutor}</div>
+       <div style="margin-bottom:5px;"></div>
+       <div><strong>Nombre del menor:</strong> ${doc.data().namemenor} ${doc.data().apaternomenor} ${doc.data().amaternomenor}</div>
+       <div style="margin-bottom:5px;"></div>
+       <div><strong>Edad de el/la menor de edad:</strong> ${doc.data().edadmenor}</div>
+       <div style="margin-bottom:5px;"></div>
+       <div><strong>CURP:</strong> ${doc.data().curpmenor}</div>
+       <div style="margin-bottom:5px;"></div>
+       <div><strong>Domicilio:</strong> ${doc.data().domiciliotutor}</div>
+       <div style="margin-bottom:5px;"></div>
+       <div><strong>Colonia:</strong> ${doc.data().coloniatutor}</div>
+       <div style="margin-bottom:5px;"></div>
+       <div><strong>Código Postal:</strong> ${doc.data().cptutor}</div>
+       <div style="margin-bottom:5px;"></div>
+       <div><strong>Colonia:</strong> ${doc.data().coloniatutor}</div>
+       <div style="margin-bottom:5px;"></div>
+       <div><strong>Municipio:</strong> ${doc.data().mpiotutor}</div>
+       <div style="margin-bottom:5px;"></div>
+       <div><strong>Correo electrónico:</strong> ${doc.data().email}</div>
+       <div style="margin-bottom:5px;"></div>
+       <div><strong>Teléfono de casa u oficina:</strong> ${doc.data().teltutor}</div>
+       <div style="margin-bottom:5px;"></div>
+       <div><strong>Celular:</strong> ${doc.data().celtutor}</div>
+       <div style="margin-bottom:5px;"></div>
+       <div><strong>Red Social para seguimiento:</strong> ${doc.data().redtutor}</div>
+       `;
         //})
     })
    .catch(function(error) {
           console.error(error);
         });
  }    
-
-  
-
-    //- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -//
 
 //- - - - - - - - -  push data - - - - - - - - - - - -//
 

@@ -18,6 +18,9 @@ var get_user = function(email) {
        var nompadre = document.getElementById("nompadre");
        nompadre.innerHTML = `<div>${doc.data().nametutor} ${doc.data().apaternotutor} ${doc.data().amaternotutor}</div>
        `;
+       var nommenor = document.getElementById("nommenor");
+       nommenor.innerHTML = `<div>${doc.data().namemenor} ${doc.data().apaternomenor} ${doc.data().amaternomenor}</div>
+       `;
         //})
     })
    .catch(function(error) {
@@ -189,6 +192,7 @@ function show(user) {
 
           <div class="card">
             <div id="nompadre" class="shadow-none p-3 mb-5 bg-light rounded">
+            <div id="nommenor" class="shadow-none p-3 mb-5 bg-light rounded">
             </div>
           </div>
         </div>

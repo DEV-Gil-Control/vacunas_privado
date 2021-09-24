@@ -26,7 +26,10 @@ var get_user = function(email) {
        `;  
        var diramparo = document.getElementById("diramparo");
        diramparo.innerHTML = `<div>${doc.data().domiciliotutor} ${doc.data().coloniatutor} ${doc.data().mpiotutor}</div>
-       `;  
+       `; 
+      var curpamparo = document.getElementById("curpamparo");
+       curpamparo.innerHTML = `<div>${doc.data().curpmenor}</div>
+       `; 
         //})
     })
    .catch(function(error) {

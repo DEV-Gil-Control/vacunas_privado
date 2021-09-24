@@ -209,7 +209,7 @@ function show(user) {
 
   if (user.emailVerified) {
     content.innerHTML = `
-      <div class="container mt-5">
+      <div class="nombredelpadretutor">
           <div class="card-body">
             <div id="todosd" class="shadow-none p-3 mb-5 bg-light rounded">
             </div>

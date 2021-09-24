@@ -26,7 +26,7 @@ var get_user = function(email) {
        <div style="margin-bottom:5px;"></div>
        <div><strong>Edad de el/la menor de edad:</strong> ${doc.data().edadmenor}</div>
        <div style="margin-bottom:5px;"></div>
-       <div><strong>Ciudad de Nacimiento:</strong> ${doc.data().ciudadmenor}</div>
+       <div><strong>Ciudad de nacimiento:</strong> ${doc.data().ciudadmenor}</div>
        <div style="margin-bottom:5px;"></div>
        <div><strong>Estado de nacimiento:</strong> ${doc.data().estadomenor}</div>
        <div style="margin-bottom:5px;"></div>

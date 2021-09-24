@@ -45,6 +45,22 @@ var get_user = function(email) {
       var nommenor6 = document.getElementById("nommenor6");
        nommenor6.innerHTML = `<div>${doc.data().namemenor} ${doc.data().apaternomenor} ${doc.data().amaternomenor}</div>
        `;
+            var nommenor7 = document.getElementById("nommenor7");
+       nommenor7.innerHTML = `<div>${doc.data().namemenor} ${doc.data().apaternomenor} ${doc.data().amaternomenor}</div>
+       `;
+      
+            var nommenor8 = document.getElementById("nommenor8");
+       nommenor8.innerHTML = `<div>${doc.data().namemenor} ${doc.data().apaternomenor} ${doc.data().amaternomenor}</div>
+       `;
+      
+            var nommenor9 = document.getElementById("nommenor9");
+       nommenor9.innerHTML = `<div>${doc.data().namemenor} ${doc.data().apaternomenor} ${doc.data().amaternomenor}</div>
+       `;
+      
+            var nommenor10 = document.getElementById("nommenor10");
+       nommenor10.innerHTML = `<div>${doc.data().namemenor} ${doc.data().apaternomenor} ${doc.data().amaternomenor}</div>
+       `;
+      
       var nacemenor = document.getElementById("nacemenor");
        nacemenor.innerHTML = `<div>${doc.data().ciudadmenor}, ${doc.data().estadomenor}</div>
        `;

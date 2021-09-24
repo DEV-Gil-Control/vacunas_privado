@@ -18,9 +18,9 @@ var get_user = function(email) {
    //querySnapshot.forEach((doc) => {
    // doc.data() is never undefined for query doc snapshots
    //console.log(doc.id, " => ", doc.data());  
-       var nombretutor = document.getElementById("nombretutor");
+       var todosd = document.getElementById("todosd");
        //document.urlParams.getAll('ID') ("todosd");
-       nombretutor.innerHTML = `<div><strong>Nombre del padre, madre o tutor:</strong> ${doc.data().nametutor} ${doc.data().apaternotutor} ${doc.data().amaternotutor}</div>
+       todosd.innerHTML = `<div><strong>Nombre del padre, madre o tutor:</strong> ${doc.data().nametutor} ${doc.data().apaternotutor} ${doc.data().amaternotutor}</div>
        <div style="margin-bottom:5px;"></div>
        <div><strong>Nombre del menor:</strong> ${doc.data().namemenor} ${doc.data().apaternomenor} ${doc.data().amaternomenor}</div>
        <div style="margin-bottom:5px;"></div>
@@ -210,9 +210,6 @@ function show(user) {
   if (user.emailVerified) {
     content.innerHTML = `
       <div class="container mt-5">
-        <div class="card">
-            <div id="nombretutor" style="margin-left:22px; margin-top:20px; font-weight: bold;">
-            </div>
           <div class="card-body">
             <div id="todosd" class="shadow-none p-3 mb-5 bg-light rounded">
             </div>

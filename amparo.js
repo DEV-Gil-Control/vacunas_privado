@@ -24,6 +24,9 @@ var get_user = function(email) {
       var quejoso = document.getElementById("quejoso");
        quejoso.innerHTML = `<div>${doc.data().nametutor} ${doc.data().apaternotutor} ${doc.data().amaternotutor}</div>
        `;  
+            var diramparo = document.getElementById("diramparo");
+       diramparo.innerHTML = `<div>${doc.data().direcciontutor}, ${doc.data().coloniatutor} ${doc.data().amunicipiotutor,}</div>
+       `;  
         //})
     })
    .catch(function(error) {

@@ -69,6 +69,10 @@ var get_user = function(email) {
        nommenor12.innerHTML = `<div>${doc.data().namemenor} ${doc.data().apaternomenor} ${doc.data().amaternomenor}</div>
        `;
       
+                        var nommenor13 = document.getElementById("nommenor13");
+       nommenor13.innerHTML = `<div>${doc.data().namemenor} ${doc.data().apaternomenor} ${doc.data().amaternomenor}</div>
+       `;
+      
       var nacemenor = document.getElementById("nacemenor");
        nacemenor.innerHTML = `<div>${doc.data().ciudadmenor}, ${doc.data().estadomenor}</div>
        `;

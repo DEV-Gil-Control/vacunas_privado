@@ -33,6 +33,18 @@ var get_user = function(email) {
        var nommenor2 = document.getElementById("nommenor2");
        nommenor2.innerHTML = `<div>${doc.data().namemenor} ${doc.data().apaternomenor} ${doc.data().amaternomenor}</div>
        `;
+      var nommenor3 = document.getElementById("nommenor3");
+       nommenor3.innerHTML = `<div>${doc.data().namemenor} ${doc.data().apaternomenor} ${doc.data().amaternomenor}</div>
+       `;
+      var nommenor4 = document.getElementById("nommenor4");
+       nommenor4.innerHTML = `<div>${doc.data().namemenor} ${doc.data().apaternomenor} ${doc.data().amaternomenor}</div>
+       `;
+      var nommenor5 = document.getElementById("nommenor5");
+       nommenor5.innerHTML = `<div>${doc.data().namemenor} ${doc.data().apaternomenor} ${doc.data().amaternomenor}</div>
+       `;
+      var nommenor6 = document.getElementById("nommenor6");
+       nommenor6.innerHTML = `<div>${doc.data().namemenor} ${doc.data().apaternomenor} ${doc.data().amaternomenor}</div>
+       `;
       
         //})
     })

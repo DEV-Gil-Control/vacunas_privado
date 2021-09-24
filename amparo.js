@@ -188,11 +188,11 @@ function show(user) {
 
   if (user.emailVerified) {
     content.innerHTML = `
-      <div class="container mt-5">
+      <div class="containertutor">
 
           <div class="card">
             <div id="nompadre" class="shadow-none p-3 mb-5 bg-light rounded">
-            <div id="nommenor" class="shadow-none p-3 mb-5 bg-light rounded">
+
             </div>
           </div>
         </div>

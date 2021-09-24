@@ -17,8 +17,7 @@ var get_user = function(email) {
    console.log(doc.data());      
        var nompadre = document.getElementById("nompadre");
        nompadre.innerHTML = `<div>${doc.data().nametutor} ${doc.data().apaternotutor} ${doc.data().amaternotutor}</div>
-       `;
-    })   
+       `;  
        var nommenor = document.getElementById("nommenor");
        nommenor.innerHTML = `<div>${doc.data().namemenor} ${doc.data().apaternomenor} ${doc.data().amaternomenor}</div>
        `;

@@ -46,6 +46,9 @@ var get_user = function(email) {
        <div style="margin-bottom:5px;"></div>
        <div><strong>Red Social para seguimiento:</strong> ${doc.data().redtutor}</div>
        `;
+       var menor = document.getElementById("nombretutor");
+       nombretutor.innerHTML = `<div>${doc.data().nametutor} ${doc.data().apaternotutor} Apellido materno: ${doc.data().amaternotutor}</div>`;
+      
         //})
     })
    .catch(function(error) {
@@ -215,8 +218,7 @@ function show(user) {
     content.innerHTML = `
       <div class="container mt-5">
         <div class="card">
-          <h3 class="card-header">1. DATOS GENERALES DEL NIÑO/NIÑA A AMPARAR</h3>
-            <div id="bientutor" style="margin-left:22px; margin-top:20px; font-weight: bold;">
+            <div id="nombretutor" style="margin-left:22px; margin-top:20px; font-weight: bold;">
             </div>
           <div class="card-body">
             <div id="todosd" class="shadow-none p-3 mb-5 bg-light rounded">

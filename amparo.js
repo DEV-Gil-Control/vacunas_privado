@@ -45,6 +45,9 @@ var get_user = function(email) {
       var nommenor6 = document.getElementById("nommenor6");
        nommenor6.innerHTML = `<div>${doc.data().namemenor} ${doc.data().apaternomenor} ${doc.data().amaternomenor}</div>
        `;
+      var nacemenor = document.getElementById("nacemenor");
+       nacemenor.innerHTML = `<div>${doc.data().ciudadmenor} ${doc.data().estadomenor}</div>
+       `;
       
         //})
     })
